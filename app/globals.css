@@ -1,172 +1,60 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
-/* Professional Theme (Dark) */
-:root {
-  --background: #1d232a;
-  --foreground: #ededed;
-  --base-100: #1d232a;
-  --base-200: #191e24;
-  --base-300: #15191e;
-  --base-content: #a6adbb;
-  --accent: #ef4444;
-  --accent-hover: #dc2626;
-  --card-bg: #191e24;
-  --border-color: #2a323c;
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 0 72.2% 50.6%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 0 72.2% 50.6%;
+    --radius: 0.5rem;
+  }
 }
 
-/* Gaming Theme (Red & Blue) */
-:root.gaming-theme {
-  --background: #0f1419;
-  --foreground: #e8eef5;
-  --base-100: #0f1419;
-  --base-200: #1a1f2e;
-  --base-300: #252a3a;
-  --base-content: #cbd5e1;
-  --accent: #ef4444;
-  --accent-hover: #dc2626;
-  --accent-blue: #3b82f6;
-  --accent-blue-hover: #2563eb;
-  --card-bg: #1a1f2e;
-  --border-color: #2d3748;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-* {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, opacity 0.4s ease;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-/* Gaming theme gradient background */
-.gaming-theme body {
-  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
-}
-
-.gaming-theme .min-h-screen {
-  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
-  background-size: 200% 200%;
-  animation: gradient-shift 10s ease infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Red accent buttons */
-.btn-accent {
-  background-color: var(--accent) !important;
-  border-color: var(--accent) !important;
-  color: #ffffff !important;
-  transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.2s ease !important;
-}
-
-.btn-accent:hover {
-  background-color: var(--accent-hover) !important;
-  border-color: var(--accent-hover) !important;
-}
-
-/* Gaming theme specific styles */
-.gaming-theme .btn-accent {
-  background-color: var(--accent) !important;
-  border-color: var(--accent) !important;
-}
-
-.gaming-theme .btn-blue {
-  background-color: var(--accent-blue) !important;
-  border-color: var(--accent-blue) !important;
-  color: #ffffff !important;
-}
-
-.gaming-theme .btn-blue:hover {
-  background-color: var(--accent-blue-hover) !important;
-  border-color: var(--accent-blue-hover) !important;
-}
-
-.gaming-theme .card {
-  background: var(--card-bg) !important;
-  border-color: var(--border-color) !important;
-}
-
-.gaming-theme .border-base-300 {
-  border-color: var(--border-color) !important;
-}
-
-.gaming-theme .bg-base-100 {
-  background-color: var(--base-100) !important;
-}
-
-.gaming-theme .bg-base-200 {
-  background-color: var(--base-200) !important;
-}
-
-.gaming-theme .text-base-content {
-  color: var(--base-content) !important;
-}
-
-.gaming-theme .text-base-content\/70 {
-  color: color-mix(in srgb, var(--base-content) 70%, transparent) !important;
-}
-
-.gaming-theme .text-base-content\/60 {
-  color: color-mix(in srgb, var(--base-content) 60%, transparent) !important;
-}
-
-/* Gaming theme red/blue accents */
-.gaming-theme .card {
-  border-left: 3px solid var(--accent) !important;
-  border-right: 3px solid var(--accent-blue) !important;
-}
-
-.gaming-theme .card-body {
-  background: linear-gradient(90deg, 
-    color-mix(in srgb, var(--card-bg) 95%, var(--accent) 5%) 0%,
-    var(--card-bg) 50%,
-    color-mix(in srgb, var(--card-bg) 95%, var(--accent-blue) 5%) 100%
-  ) !important;
-}
-
-/* Slide animations for content transitions */
-.slide-in-left {
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  pointer-events: auto;
-}
-
-.slide-out-left {
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  pointer-events: none;
-}
-
-.slide-in-right {
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  pointer-events: auto;
-}
-
-.slide-out-right {
-  transform: translateX(100%);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  pointer-events: none;
 }

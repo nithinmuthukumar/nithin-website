@@ -5,12 +5,14 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Check } from "lucide-react";
+import { FaDiscord } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
   { href: "/decks", label: "Decks" },
+  { href: "/tools", label: "Tools" },
 ];
 
 export function Navigation() {
@@ -32,7 +34,10 @@ export function Navigation() {
       <div className="container mx-auto px-4 py-4 max-w-6xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-xl font-bold hover:text-primary transition-colors">
+            <Link
+              href="/"
+              className="text-xl font-bold hover:text-primary transition-colors"
+            >
               Nithin Muthukumar
             </Link>
             <div className="hidden md:flex items-center gap-4">
@@ -44,7 +49,7 @@ export function Navigation() {
                     "text-sm font-medium transition-colors hover:text-primary",
                     pathname === item.href
                       ? "text-foreground"
-                      : "text-muted-foreground"
+                      : "text-muted-foreground",
                   )}
                 >
                   {item.label}
@@ -80,6 +85,17 @@ export function Navigation() {
                 <ExternalLink className="w-3 h-3" />
               </a>
             </Button>
+            <Button asChild variant="outline" size="sm">
+              <a
+                href="https://discord.com/users/nithin72660"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+                title="Discord"
+              >
+                <FaDiscord className="w-4 h-4" />
+              </a>
+            </Button>
           </div>
         </div>
         {/* Mobile menu */}
@@ -92,7 +108,7 @@ export function Navigation() {
                 "text-sm font-medium transition-colors hover:text-primary",
                 pathname === item.href
                   ? "text-foreground"
-                  : "text-muted-foreground"
+                  : "text-muted-foreground",
               )}
             >
               {item.label}
@@ -103,5 +119,3 @@ export function Navigation() {
     </nav>
   );
 }
-
-

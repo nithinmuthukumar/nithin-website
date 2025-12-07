@@ -87,7 +87,7 @@ export function Navigation() {
             </Button>
             <Button asChild variant="outline" size="sm">
               <a
-                href="https://discord.com/users/nithin72660"
+                href="https://discord.gg/ZT7xTtDTMe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

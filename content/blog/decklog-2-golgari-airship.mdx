@@ -1,0 +1,129 @@
+---
+title: "Decklog #2: Golgari Airship"
+date: "2025-12-13"
+excerpt: "Initial Data Collection and Adapting to Meta"
+thumbnail: "/thumbnails/mkm-240-urgent-necropsy.jpg"
+---
+
+<DecklistCard url="https://moxfield.com/decks/yF298oBNK0-MGUNeDa_vlQ">
+  ![Golgari Airship Decklog 2](/deckpics/golgari-airship-decklog2.png)
+</DecklistCard>
+
+## Introduction
+
+This week I started tracking matches on Untapped so I can back my impressions with real data. The World Championship last weekend solidified Izzet Monument as the deck to beat, and the metagame has started to revolve around it. The format still feels healthy overall, Izzet Monument made up about 15% of my games which is large but not oppressive.
+
+## State of the Deck
+
+This week I had a 66% win rate across 132 games. The deck is performing fairly well, although it's definitely not broken and has its weaknesses. I'm happy with the current configuration, and there are no glaring issues that need to be addressed.
+
+The manabase can still be problematic sometimes, but I don't think it can be improved without the shocklands coming in Lorwyn.
+
+The deck also has problems where hands either don't have ramp or no payoff, which is common for midrange decks. It's been a process of learning through pain to mulligan more aggressively, and this deck mulligans to 6 well. Obsessive Pursuit and Beseech the Mirror are fairly important for hands to be good. Sentinel also works as a strong bridge until you can find a real payoff. 
+
+## Matchup Breakdown
+
+Here's a list of matchups and winrates after sanitizing the data by archetype, I've only included matchups with 3 or more games. Statistically I shouldn't be drawing conclusions from such small sample sizes, so they're mostly backed by logic and how they feel. For detailed matchup analysis, see the [deck guide](/decks/golgari-airship).
+
+<MatchupTable matchups={[
+  { name: "Izzet Looting", wins: 3, losses: 0, assessment: "good" },
+  { name: "Red Aggro", wins: 8, losses: 1, assessment: "good" },
+  { name: "Jeskai Control", wins: 7, losses: 0, assessment: "good" },
+  { name: "Golgari Roots", wins: 2, losses: 1, assessment: "good" },
+  { name: "Green Aggro", wins: 3, losses: 1, assessment: "good" },
+  { name: "Gruul Delirium", wins: 4, losses: 1, assessment: "good" },
+  { name: "Bant Airbending", wins: 3, losses: 0, assessment: "good" },
+  { name: "Izzet Monument", wins: 12, losses: 8, assessment: "even" },
+  { name: "Azorius Control", wins: 2, losses: 4, assessment: "even" },
+  { name: "Sultai Reanimator", wins: 2, losses: 1, assessment: "even" },
+  { name: "Jeskai Artifacts", wins: 3, losses: 0, assessment: "even" },
+  { name: "Esper Artifacts", wins: 3, losses: 0, assessment: "even" },
+  { name: "Dimir Kaito", wins: 1, losses: 5, assessment: "bad" },
+  { name: "Kona Variants", wins: 2, losses: 2, assessment: "bad" },
+  { name: "Simic Aggro", wins: 1, losses: 3, assessment: "bad" }
+]} />
+
+## Changes
+
+<DeckChanges sections={[
+  {
+    title: "Maindeck",
+    added: [
+      <CardName>Urgent Necropsy</CardName>,
+    ],
+    removed: [
+      <CardName>Defend the Rider</CardName>,
+    ]
+  },
+  {
+    title: "Sideboard",
+    added: [
+      <>2x <CardName>Wear Down</CardName></>,
+      <CardName> Dauntless Scrapbot</CardName>,
+      <CardName>Intimidation Tactics</CardName>,
+    ],
+    removed: [
+      <>2x <CardName>Heritage Reclamation</CardName></>,
+      <CardName>Ghost Vacuum</CardName>,
+      <CardName>Duress</CardName>,
+    ]
+  }
+]} />
+
+<CardName>Urgent Necropsy</CardName> is a powerful card in matchups where opponents play multiple permanents of different types. it serves as a maindeck answer to <CardName>Monument to Endurance</CardName> with <CardName>Artist's Talent</CardName>. Destroying both is extremely powerful since a lot of power from the Izzet decks is predicated on these cards being difficult to interact with. It's also incidentally good in other matchups such as Gruul Delirium, Selesnya Cage, Golgari Roots and <CardName>Seam Rip</CardName>.
+
+The main downside of the card is finding enough evidence to collect, which isn't easy for a non-graveyard deck. Thankfully the cards you're typically going to target with it are fairly cheap. Monument and Talent are only 5 evidence and an otter token is free. Another problem is Beseeching into Necropsy doesn't actually pay for the evidence since Beseech is still on the stack as you pay the costs. Thankfully Beseeching into a Beseech before using necropsy works since the first beseech will go to the graveyard.
+
+<CardName>Defend the Rider</CardName> was interesting in theory, but in practice I often couldn’t hold it up effectively. Against Izzet decks full of cheap removal, protecting a single creature or Airship wasn’t impactful enough.
+
+The sideboard changes were mostly upgrades. <CardName>Heritage Reclamation</CardName> is flexible, but <CardName>Wear Down</CardName> has been a much stronger silver bullet against Monument and artifact decks. It also feels more impactful when fetched with Beseech.
+
+<CardName>Dauntless Scrapbot</CardName> has been excellent graveyard hate. Against Lessons, exiling the graveyard immediately slows them down. <CardName>Ghost Vacuum</CardName> was too slow to matter in those matchups. Scrapbot’s body and token are also synergistic with the rest of the deck, which makes it a valuable inclusion.
+
+<CardName>Soul-Guide Lantern</CardName> still comes in versus Lessons, but overall it is a card down, while Scrapbot adds material. Against Reanimator, however, Lantern is better since you can hold up the activation at instant speed.
+
+An extra <CardName>Intimidation Tactics</CardName> has been helpful in the Reanimator and Kona matchups, which are hard to interact with in other ways.
+
+## Other Cards I Tested
+
+I started the week off thinking about how best to answer the monument deck. BG are great colors to look for answers and the first two I tried were <CardName>Assassin's Trophy</CardName> and <CardName>Maelstrom Pulse</CardName>. These cards are powerful catch-all answers, but have their downsides. Trophy gives opponents an untapped land, which is pretty big and has led to assassin's trophy seeing very limited play. Maelstrom pulse is also slow and expensive. That led me to test <CardName>Urgent Necropsy</CardName> after a suggestion from the Discord, and I was pleasantly surprised by how well it performed.
+
+I decided to give <CardName>Shoot the Sheriff</CardName> a shot:) over <CardName>Bitter Triumph</CardName> since I didn't think planeswalkers were that big a deal, although it is nice to have the option to kill them. I promptly took them out when I played against Dimir and had 0 targets for most of the game. There are simply too many creatures that are outlaws for this to be a catch all answer. This deck also typically has enough card advantage to be ok with discarding a card when necessary.
+
+I also tried a <CardName>Fountainport</CardName> over a Forest, with the reasoning that forests are also mostly just an offcolour source. Fountainport also has a lot of nice utility in this deck which is really powerful. The problem is, half the lands in the deck only tap for one color. This put me in situations where I was forced to name green on <CardName>Multiversal Passage</CardName>, making it impossible to cast beseech on curve. For now, I prefer the consistency of smoother mana over the extra value Fountainport provides.
+
+<CardName>Edge Rover</CardName> was something I tried as a one drop that can block <CardName>Gran-Gran</CardName> and leave something behind when it dies. The Lesson deck has a ton of removal that can make mana dorks feel pretty bad and just play into filling their graveyard with lessons. Overall, it was okay but I missed the ramp that elves gave.
+
+I also tried <CardName>Tezzeret, Cruel Captain</CardName>. The idea is he's always able to fetch a Pollinator so he doesn't reduce creature count, and with Badgermole acts as a ritual. The deck also makes a ton of artifact tokens so putting loyalty on him is very easy. There's a lot of cool things you can do with him but overall he felt unimpactful. I think he's still viable against control but I wasn't too impressed.
+
+## Accumulated Knowledge
+
+Cutting some mana dorks in the Izzet Lessons matchup has been very correct. Especially on the draw, they tend to be weak into <CardName>Gran-Gran</CardName> and other sideboard cards like <CardName>Pyroclasm</CardName>.
+
+I need to mulligan more aggressively for hands that actually do something. I tend to be conservative with mulligans, but I've been rewarded more often by going to six and finding hands with both ramp and payoff.
+
+Getting to eight <CardName>Phoenix Fleet Airship</CardName> triggers isn't the win condition in the Monument matchup. The burn plan is too fast for that to matter, so the games are mostly about early pressure and disruption.
+
+The <CardName>Beseech the Mirror</CardName> interaction with <CardName>Urgent Necropsy</CardName> when collecting evidence was an interesting discovery that feels unique to this deck.
+
+Overall, I've developed a much better handle on sideboarding across the major matchups.
+
+## Reflections From Last Week
+
+The most impactful change last week was in the manabase. Moving up to 25 lands has paid off in terms of consistency and reducing mana screw. The extra Forest has also not been too punishing.
+
+Running two copies of <CardName>Phoenix Fleet Airship</CardName> has continued to feel right. I haven’t had issues running out of Airships except in games where the opponent is on <CardName>Maelstrom Pulse</CardName>, and even then the deck has plenty of other ways to win.
+
+## Next Steps
+
+I need to collect even more data, the sample sizes are still too small to draw meaningful conclusions. 
+
+This deck does have a weakness to being tempoed out typically by Dimir Kaito or Azorius flash. The deck needs a more solid plan against this.
+
+Need to experiment with running less removal, since deck has a solid aggro matchup and could use more creatures.
+
+How impactful is High Noon? In theory, <CardName>Pursuit of Obsession</CardName> should give a large advantage against it, but is it too easy to get tempoed out of creatures? If that’s the case, I’ll need to bring in more hate for it in those matchups.
+
+---
+
+If you have any questions or want to discuss the deck, feel free to join the [Discord](https://discord.gg/ZT7xTtDTMe).

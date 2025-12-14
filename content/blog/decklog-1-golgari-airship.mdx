@@ -57,71 +57,43 @@ Really favourable matchup. They have very few ways to handle Airship, and their 
 
 ## Changes
 
-<div className="space-y-6 my-6">
-  <div>
-    <h4 className="font-bold text-lg mb-3">Maindeck</h4>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="border border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950/30 p-4 rounded">
-        <h3 className="font-semibold text-green-700 dark:text-green-400 mb-3 text-sm uppercase tracking-wide">+ Added</h3>
-        <div className="space-y-2 text-sm">
-          <div><CardName>Bristlebud Farmer</CardName></div>
-          <div><CardName>Defend the Rider</CardName></div>
-          <div>2x <CardName>Bitter Triumph</CardName></div>
-        </div>
-      </div>
+<DeckChanges sections={[
+  {
+    title: "Maindeck",
+    added: [
+      <CardName>Bristlebud Farmer</CardName>,
+      <CardName>Defend the Rider</CardName>,
+      <>2x <CardName>Bitter Triumph</CardName></>
+    ],
+    removed: [
+      <>2x <CardName>Pawpatch Recruit</CardName></>,
+      <CardName>Fanatical Offering</CardName>,
+      <CardName>Phoenix Fleet Airship</CardName>,
+      <>2x <CardName>Nowhere to Run</CardName></>
+    ]
+  },
+  {
+    title: "Mana Base",
+    added: [
+      <CardName>Fabled Passage</CardName>,
+      "Swamp",
+      "Forest"
+    ],
+    removed: [
+      <CardName>Restless Cottage</CardName>
+    ]
+  },
+  {
+    title: "Sideboard",
+    added: [
+      <CardName>Soul-Guide Lantern</CardName>
+    ],
+    removed: [
+      <CardName>Ghost Vacuum</CardName>
+    ]
+  }
+]} />
 
-      <div className="border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/30 p-4 rounded">
-        <h3 className="font-semibold text-red-700 dark:text-red-400 mb-3 text-sm uppercase tracking-wide">− Removed</h3>
-        <div className="space-y-2 text-sm">
-          <div>2x <CardName>Pawpatch Recruit</CardName></div>
-          <div><CardName>Fanatical Offering</CardName></div>
-          <div><CardName>Phoenix Fleet Airship</CardName></div>
-          <div>2x <CardName>Nowhere to Run</CardName></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <h4 className="font-bold text-lg mb-3">Mana Base</h4>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="border border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950/30 p-4 rounded">
-        <h3 className="font-semibold text-green-700 dark:text-green-400 mb-3 text-sm uppercase tracking-wide">+ Added</h3>
-        <div className="space-y-2 text-sm">
-          <div><CardName>Fabled Passage</CardName></div>
-          <div>Swamp</div>
-          <div>Forest</div>
-        </div>
-      </div>
-
-      <div className="border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/30 p-4 rounded">
-        <h3 className="font-semibold text-red-700 dark:text-red-400 mb-3 text-sm uppercase tracking-wide">− Removed</h3>
-        <div className="space-y-2 text-sm">
-          <div><CardName>Restless Cottage</CardName></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <h4 className="font-bold text-lg mb-3">Sideboard</h4>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="border border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950/30 p-4 rounded">
-        <h3 className="font-semibold text-green-700 dark:text-green-400 mb-3 text-sm uppercase tracking-wide">+ Added</h3>
-        <div className="space-y-2 text-sm">
-          <div><CardName>Soul-Guide Lantern</CardName></div>
-        </div>
-      </div>
-
-      <div className="border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/30 p-4 rounded">
-        <h3 className="font-semibold text-red-700 dark:text-red-400 mb-3 text-sm uppercase tracking-wide">− Removed</h3>
-        <div className="space-y-2 text-sm">
-          <div><CardName>Ghost Vacuum</CardName></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 There are a few key changes in this version that I believe have made the deck much more consistent. 
 ## Manabase
 

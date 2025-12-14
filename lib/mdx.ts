@@ -62,5 +62,3 @@ export function getAllPosts(): BlogPost[] {
 
   return posts;
 }
-
-

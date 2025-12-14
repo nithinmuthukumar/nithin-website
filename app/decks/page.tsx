@@ -1,6 +1,14 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, BookOpen } from "lucide-react";
+import { getAllGuides } from "@/lib/guides";
+import Link from "next/link";
 
 interface Deck {
   name: string;
@@ -15,21 +23,24 @@ const decks: Deck[] = [
   {
     name: "Golgari Airship",
     format: "Standard",
-    description: "A grindy midrange deck built around Phoenix Fleet Airship as an extremely resilient, inevitable top-end.",
+    description:
+      "A grindy midrange deck built around Phoenix Fleet Airship as an extremely resilient, inevitable top-end.",
     moxfieldUrl: "https://moxfield.com/decks/yF298oBNK0-MGUNeDa_vlQ",
     colorIdentity: ["G", "B"],
   },
   {
     name: "Izzet Hellraiser",
     format: "Standard - (Rotated)",
-    description: "A control-combo deck built around Capricious Hellraiser copying Season of Weaving",
+    description:
+      "A control-combo deck built around Capricious Hellraiser copying Season of Weaving",
     moxfieldUrl: "https://moxfield.com/decks/B4DgzUfDFkicJe0IhnbTrg",
     colorIdentity: ["U", "R"],
   },
   {
     name: "Izzet Overload",
     format: "Standard - (Rotated)",
-    description: "A control-combo deck built around making a giant weird token with Experimental Overload and flinging it at the opponent",
+    description:
+      "A control-combo deck built around making a giant weird token with Experimental Overload and flinging it at the opponent",
     moxfieldUrl: "https://moxfield.com/decks/4kGOuvfaGUKRnj5g5EoFJA",
     colorIdentity: ["U", "R"],
   },
@@ -44,6 +55,11 @@ const colorMap: Record<string, string> = {
 };
 
 export default function DecksPage() {
+  const guides = getAllGuides();
+
+  // Create a map of deck name to guide slug
+  const guideMap = new Map(guides.map((guide) => [guide.deck, guide.slug]));
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-6xl">
       <div className="mb-12">
@@ -83,39 +99,51 @@ export default function DecksPage() {
               <CardDescription>{deck.format}</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 flex flex-col">
-              <p className="text-muted-foreground mb-4 flex-1">{deck.description}</p>
-              {deck.moxfieldUrl ? (
-                <Button asChild variant="outline" size="sm">
-                  <a
-                    href={deck.moxfieldUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2"
-                  >
-                    View on Moxfield
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </Button>
-              ) : (
-                <Button asChild variant="outline" size="sm">
-                  <a
-                    href="https://moxfield.com/users/Nithin"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2"
-                  >
-                    View on Moxfield
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </Button>
-              )}
+              <p className="text-muted-foreground mb-4 flex-1">
+                {deck.description}
+              </p>
+              <div className="flex gap-2">
+                {guideMap.has(deck.name) && (
+                  <Button asChild variant="default" size="sm">
+                    <Link
+                      href={`/decks/${guideMap.get(deck.name)}`}
+                      className="inline-flex items-center gap-2"
+                    >
+                      View Guide
+                      <BookOpen className="w-3 h-3" />
+                    </Link>
+                  </Button>
+                )}
+                {deck.moxfieldUrl ? (
+                  <Button asChild variant="outline" size="sm">
+                    <a
+                      href={deck.moxfieldUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2"
+                    >
+                      Moxfield
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </Button>
+                ) : (
+                  <Button asChild variant="outline" size="sm">
+                    <a
+                      href="https://moxfield.com/users/Nithin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2"
+                    >
+                      Moxfield
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </Button>
+                )}
+              </div>
             </CardContent>
           </Card>
         ))}
       </div>
-
     </div>
   );
 }
-
-

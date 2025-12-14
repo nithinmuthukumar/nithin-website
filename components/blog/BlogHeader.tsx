@@ -15,10 +15,11 @@ export function BlogHeader({ title, date, excerpt }: BlogHeaderProps) {
       <div className="flex items-center gap-3 text-muted-foreground mb-6">
         <Calendar className="w-4 h-4 text-primary" />
         <time dateTime={date} className="font-medium">
-          {new Date(date).toLocaleDateString("en-US", {
+          {new Date(date + "T00:00:00").toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
+            timeZone: "UTC",
           })}
         </time>
       </div>
@@ -30,4 +31,3 @@ export function BlogHeader({ title, date, excerpt }: BlogHeaderProps) {
     </header>
   );
 }
-

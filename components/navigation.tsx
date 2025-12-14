@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Check } from "lucide-react";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaYoutube } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -94,6 +95,34 @@ export function Navigation() {
                 title="Discord"
               >
                 <FaDiscord className="w-4 h-4" />
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <a
+                href="https://www.youtube.com/@NithinM2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+                title="YouTube"
+              >
+                <FaYoutube className="w-4 h-4" />
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <a
+                href="https://mtga.untapped.gg/profile/12190cdd-70c3-4cf2-939e-e060140cc533/XWLADHLAOJASBEA6HGPYJE2WNI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+                title="Untapped"
+              >
+                <Image
+                  src="/untapped-icon.png"
+                  alt="Untapped"
+                  width={16}
+                  height={16}
+                  className="w-4 h-4"
+                />
               </a>
             </Button>
           </div>

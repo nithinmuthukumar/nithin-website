@@ -90,14 +90,21 @@ export function CardInfo({
   let otherContent: ReactNode[] = [];
 
   Children.forEach(children, (child) => {
-    if (isValidElement(child) && child.props.slot) {
-      const slot = child.props.slot;
+    if (
+      isValidElement(child) &&
+      typeof child.props === "object" &&
+      child.props !== null &&
+      "slot" in child.props
+    ) {
+      const slot = child.props.slot as string;
+      const childContent =
+        "children" in child.props ? child.props.children : null;
       if (slot === "info") {
-        infoContent = child.props.children;
+        infoContent = childContent;
       } else if (slot === "sideout") {
-        sideOutContent = child.props.children;
+        sideOutContent = childContent;
       } else if (slot === "tips") {
-        tipsContent = child.props.children;
+        tipsContent = childContent;
       } else {
         otherContent.push(child);
       }

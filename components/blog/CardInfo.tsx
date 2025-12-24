@@ -97,8 +97,9 @@ export function CardInfo({
       "slot" in child.props
     ) {
       const slot = child.props.slot as string;
-      const childContent =
-        "children" in child.props ? child.props.children : null;
+      const childContent = (
+        "children" in child.props ? child.props.children : null
+      ) as ReactNode;
       if (slot === "info") {
         infoContent = childContent;
       } else if (slot === "sideout") {

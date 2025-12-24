@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { type Heading } from "@/lib/toc";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,7 @@ interface TableOfContentsProps {
 export function TableOfContents({ headings }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (headings.length === 0) return;
@@ -28,7 +29,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       {
         rootMargin: "-20% 0% -35% 0%",
         threshold: 0,
-      }
+      },
     );
 
     headings.forEach((heading) => {
@@ -47,6 +48,25 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       });
     };
   }, [headings]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        panelRef.current &&
+        !panelRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
@@ -74,10 +94,10 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
         heading.level === 2
           ? "ml-0"
           : heading.level === 3
-          ? "ml-4"
-          : heading.level === 4
-          ? "ml-8"
-          : "ml-0";
+            ? "ml-4"
+            : heading.level === 4
+              ? "ml-8"
+              : "ml-0";
 
       return (
         <button
@@ -89,7 +109,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
             isActive
               ? "bg-primary/10 text-primary font-medium"
               : "text-muted-foreground",
-            indentClass
+            indentClass,
           )}
         >
           {heading.text}
@@ -109,17 +129,14 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       </Button>
 
       {isOpen && (
-        <div className="fixed top-36 right-4 lg:right-10 z-50 w-[min(90vw,20rem)] max-h-[70vh] overflow-y-auto rounded-2xl border border-border bg-background/95 backdrop-blur shadow-2xl p-4 space-y-3">
-          <div className="flex items-center justify-between">
-            <p className="font-semibold">Table of Contents</p>
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-              <X className="w-4 h-4" />
-            </Button>
-          </div>
+        <div
+          ref={panelRef}
+          className="fixed top-36 right-4 lg:right-10 z-50 w-[min(90vw,20rem)] max-h-[70vh] overflow-y-auto rounded-2xl border border-border bg-background/95 backdrop-blur shadow-2xl p-4 space-y-3"
+        >
+          <p className="font-semibold mb-2">Table of Contents</p>
           <div className="space-y-1">{renderHeadingButtons()}</div>
         </div>
       )}
     </>
   );
 }
-

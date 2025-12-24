@@ -15,6 +15,7 @@ interface Deck {
   format: string;
   description: string;
   moxfieldUrl?: string;
+  guideUrl?: string;
   colorIdentity: string[];
 }
 
@@ -34,6 +35,8 @@ const decks: Deck[] = [
     description:
       "A control-combo deck built around Capricious Hellraiser copying Season of Weaving",
     moxfieldUrl: "https://moxfield.com/decks/B4DgzUfDFkicJe0IhnbTrg",
+    guideUrl:
+      "https://docs.google.com/document/d/1m2mwR3i1w8b_aD7Jt9NH1upkFopgXrV6_0apXcuXCOE/edit?tab=t.0#heading=h.4k5w91ywcgeq",
     colorIdentity: ["U", "R"],
   },
   {
@@ -103,15 +106,27 @@ export default function DecksPage() {
                 {deck.description}
               </p>
               <div className="flex gap-2">
-                {guideMap.has(deck.name) && (
+                {(guideMap.has(deck.name) || deck.guideUrl) && (
                   <Button asChild variant="default" size="sm">
-                    <Link
-                      href={`/decks/${guideMap.get(deck.name)}`}
-                      className="inline-flex items-center gap-2"
-                    >
-                      View Guide
-                      <BookOpen className="w-3 h-3" />
-                    </Link>
+                    {deck.guideUrl ? (
+                      <a
+                        href={deck.guideUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2"
+                      >
+                        View Guide
+                        <BookOpen className="w-3 h-3" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={`/decks/${guideMap.get(deck.name)}`}
+                        className="inline-flex items-center gap-2"
+                      >
+                        View Guide
+                        <BookOpen className="w-3 h-3" />
+                      </Link>
+                    )}
                   </Button>
                 )}
                 {deck.moxfieldUrl ? (

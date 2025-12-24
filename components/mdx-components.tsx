@@ -5,8 +5,11 @@ import { ExternalLink } from "lucide-react";
 import { DecklistCard } from "@/components/blog/DecklistCard";
 import { CodeBlock } from "@/components/blog/CodeBlock";
 import { CardName } from "@/components/blog/CardName";
+import { CardImage } from "@/components/blog/CardImage";
 import { DeckChanges } from "@/components/blog/DeckChanges";
 import { MatchupTable } from "@/components/blog/MatchupTable";
+import { SideboardGuide } from "@/components/blog/SideboardGuide";
+import { MatchupRating } from "@/components/blog/MatchupRating";
 import { slugify } from "@/lib/toc";
 
 export function getMDXComponents(
@@ -24,12 +27,59 @@ export function getMDXComponents(
     CardName: ({ children }: { children?: React.ReactNode }) => (
       <CardName>{children}</CardName>
     ),
+    CardImage: ({
+      name,
+      size,
+      className,
+    }: {
+      name: string;
+      size?: "sm" | "md" | "lg";
+      className?: string;
+    }) => <CardImage name={name} size={size} className={className} />,
     DeckChanges: ({ sections }: { sections?: any[] }) => (
       <DeckChanges sections={sections || []} />
     ),
     MatchupTable: ({ matchups }: { matchups?: any[] }) => (
       <MatchupTable matchups={matchups || []} />
     ),
+    SideboardGuide: ({
+      cardsIn,
+      cardsOut,
+      onTheDrawIn,
+      onTheDrawOut,
+      mainIdeas,
+      conditional,
+    }: {
+      cardsIn: { name: string; count: number; note?: string }[];
+      cardsOut: { name: string; count: number; note?: string }[];
+      onTheDrawIn?: { name: string; count: number; note?: string }[];
+      onTheDrawOut?: { name: string; count: number; note?: string }[];
+      mainIdeas?: string[];
+      conditional?: {
+        condition: string;
+        cardsIn: { name: string; count: number; note?: string }[];
+        cardsOut: { name: string; count: number; note?: string }[];
+      }[];
+    }) => (
+      <SideboardGuide
+        cardsIn={cardsIn || []}
+        cardsOut={cardsOut || []}
+        onTheDrawIn={onTheDrawIn}
+        onTheDrawOut={onTheDrawOut}
+        mainIdeas={mainIdeas}
+        conditional={conditional}
+      />
+    ),
+    MatchupRating: ({
+      rating,
+    }: {
+      rating:
+        | "Very Favorable"
+        | "Favorable"
+        | "Even"
+        | "Unfavorable"
+        | "Very Unfavorable";
+    }) => <MatchupRating rating={rating} />,
     Card: ({ children, ...props }: any) => (
       <Card className="my-8" {...props}>
         {children}

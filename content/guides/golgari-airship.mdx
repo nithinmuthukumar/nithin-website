@@ -1,15 +1,930 @@
 ---
 title: "Golgari Airship Deck Guide"
-date: "2025-12-05"
+date: "2025-12-20"
 excerpt: "Complete, Up-to-Date Deck Guide for Golgari Airship"
 thumbnail: "/thumbnails/big-17-bristlebud-farmer.png"
 deck: "Golgari Airship"
 ---
 
 <DecklistCard url="https://moxfield.com/decks/yF298oBNK0-MGUNeDa_vlQ">
-  ![Golgari Airship](/deckpics/golgari-airship-decklog2.png)
+  ![Golgari Airship](/deckpics/golgari-airship-deck-guide.png)
 </DecklistCard>
 
-## 🚧 Under Construction 🚧
+## Introduction
 
-This guide is currently being updated and expanded. Check back soon for more detailed content!
+Hello, this is the Golgari Airship Deck Guide. This will be a living guide for Golgari Airship that is updated weekly. If you have any suggestions or feedback feel free to join the discord server.
+
+For a detailed history of weekly changes and meta adjustments, check out the [Golgari Airship decklogs](/blog?deck=golgari-airship) on the blog.
+
+This guide will cover every aspect of the deck, feel free to let me know if you think something is missing.
+
+## Overview
+
+![Deck Diagram](/deck_diagram.png)
+
+This is a grindy midrange deck built around two ATLA cards: Obsessive Pursuit and Phoenix Fleet Airship. The primary game plan is to cast <CardName>Beseech the Mirror</CardName> with bargain, tutoring up an Airship while immediately satisfying its sacrifice condition. From there, Airship becomes a scaling, inevitable threat that most decks struggle to answer once it starts replicating.
+
+While Airship represents the deck’s most powerful top end, many games are actually won by leaning on Obsessive Pursuit as the core engine. Pursuit provides steady card advantage and turns even small creatures into real threats, producing constant pressure. The ramp package ties this together by enabling explosive starts, crewing airships, and making efficient use of clue tokens and attack triggers.
+
+<CardName>Beseech the Mirror</CardName> also gives the deck a strong toolbox angle. Because the list is built to consistently bargain Beseech, it can reliably access powerful silver bullets or removal spell.
+
+Overall, the deck is highly synergistic without being fragile. Each card functions well on its own, but together they create a resilient midrange strategy that excels at grinding, scaling into the late game, and pivoting its win condition based on the matchup and texture of the game.
+
+## Why Should You Play This Deck?
+
+I personally enjoy playing competitive decks built around mechanically unique cards, which is a big part of why this archetype really draws me in.
+
+The deck is also very engaging to play. There are a lot of small decisions that add up over the course of a game, from sequencing sacrifices, to choosing when and what to Beseech for, to navigating combat with Airships. If you like grindy midrange decks that reward tight play and give you room to outmaneuver your opponent, this deck does that extremely well.
+
+This deck is a strong fit for the current metagame, especially because it lines up well against Izzet through a disruption-heavy game plan. Having access to a toolbox via <CardName>Beseech the Mirror</CardName> is a real upside, particularly in formats where specific answers matter a lot.
+
+## Card Breakdown
+
+<CardInfo name="Brave the Wilds" count={2}>
+  <Slot slot="info">
+  
+  Brave the Wilds is a basic land tutor with a bargain ability that’s very synergistic with the deck.
+  
+  At its floor, it simply finds a basic land, which is important because this deck really wants to hit land drops every turn. Fetching basics also helps enable the verges, which matters a lot for casting Beseech on curve.
+  
+  The bargain mode is where the card really shines, turning a land you control into a 3/3 with a ton of upside:
+  
+  - Bargain provides a free sacrifice trigger
+  
+  - The land becomes a creature that can attack or crew Airships
+  
+  - With Badgermole Cub, it can generate extra mana, making the spell effectively free
+  
+  Overall, it’s a consistency piece early that scales into real utility later, which is exactly what this deck is looking for.
+  
+</Slot>
+    
+<Slot slot="sideout">
+    Can be trimmed on the draw if you need a slot.
+</Slot>
+    
+<Slot slot="tips">
+  - Don't hesitate to cast it early just to find lands.
+  - Earthbending an animated land will turn it back into a 0/0 with a +1/+1 counter.
+  </Slot>
+  
+</CardInfo>
+
+### Ramp
+
+    The ramp package in this deck serves 2 purposes. The first is to ramp into beseech as well as have extra mana to sacrifice artifact tokens. The second is to have bodies to crew the Airships. Airship having a crew cost of 1 makes these creatures really important for utilizing them in combat. They're also bodies to put counters on with pursuit which can turn these creatures into real threats.
+
+<CardInfo name="Llanowar Elves" count={2}>
+  <Slot slot="info">
+   The quintessential mana dork, Llanowar elves help accelerate the early game and can lead to really powerful starts. 
+    Although there aren't a lot of 3 drops in the deck, Elves enable Turn 2 Sentinel, which is a fairly powerful start.
+    </Slot>
+  <Slot slot="sideout">
+    Mana Dorks aren't great into decks with a lot of cheap removal, like Izzet Lessons. In those matchups I would cut them.
+    - I would also side out a few into red aggro running <CardName>Nova Hellkite</CardName> since it's a free kill for the opponent.
+  </Slot>
+  <Slot slot="tips">
+    - When curving into Cub turn 2, make sure to tap the elf to pay for it so that you can have access to black for other spells
+    
+    - Try to use elves for generic costs as much as possible, so as to not waste black pips
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Gene Pollinator" count={4}>
+  <Slot slot="info">
+      Gene Pollinator may seem like a worse Llanowar Elves, but in this deck it's often better since it can tap for black, making it easier to use the extra mana to cast beseech. This deck is also full of token permanents, which makes it a reliable mana source.
+  </Slot>
+  <Slot slot="sideout">
+      Never
+  </Slot>
+  <Slot slot="tips">
+      - Can be sacrificed for Bargain to Beseech, especially when other fodder isn't available.
+      - You can tap clues before sacrificing them.
+  </Slot>
+
+</CardInfo>
+
+<CardInfo name="Badgermole Cub" count={4}>
+  <Slot slot="info">
+    Badgermole Cub is an absurdly strong card. With mana dorks it produces huge bursts of mana, and it is one of the biggest reasons to run mana dorks in the first place. It effectively doubles your mana, which can let the deck have extremely accelerated starts.
+    
+    It also provides 2 bodies to crew, which makes it a really good creature to topdeck when you have multiple Airships.
+  </Slot>
+  <Slot slot="sideout">
+      Can potentially trim a few against <CardName>Floodpits Drowner</CardName>
+  </Slot>
+  <Slot slot="tips">
+      - If you suspect opponent has a removal spell, go into full control when tapping dorks, since arena may not give priority if the opponent tries to kill it in response to the earthbend trigger.
+      - Animating Restless Cottage is really powerful, especially in matchups where graveyard hate is important. Cottage also makes food tokens which can be bargained.
+      - Earthbending a Fabled Passage allows you to return the passage to the battlefield when you sacrifice it. On paper, this is less mana then just animating another land, but there are a few good reasons to do it:
+        - Makes turn 3 passage less sad, gives access to an extra mana on turn 3 since sacrificing the passage will result in an untapped land due to the passage returning.
+        - Can be a chump blocker that can be sacrificed after blockers are declared.
+        - If you expect cub to be removed and don't need the extra mana immediately.
+        - Allows passage to be used as a sacrifice trigger on another turn.
+  
+    Beseeching for cub is good if you need a hasty attacker to take out an opponent or gain life.
+  </Slot>
+</CardInfo>
+
+### Counters and Fodder
+
+<CardInfo name="Obsessive Pursuit" count={4}>
+  <Slot slot="info">
+    Obsessive Pursuit is perhaps the most important card in the deck, since it's an enabler and payoff. Pursuit generates a clue when it enters and on your upkeep, which can be a great source of card advantage or fodder for Beseech. 
+    
+    The attack trigger can be the main gameplan in a lot of situations, especially against aggressive decks. In the lategame, multiple pursuits can turn any creature into a giant lifelinking threat, capable of oneshotting the opponent.
+    
+    The card advantage also makes it a really powerful tool against control or grindy decks, as it gives you the card advantage necessary to push through interaction.
+    
+  </Slot>
+  <Slot slot="sideout">
+      Side out 1 copy against aggressive decks, 2 copies if on the draw. This card is still very important in aggressive matchups, but the lifeloss from clues can add up.
+      Also side out a copy on the draw if you're also siding out mana dorks, which is typically against removal heavy decks. Less ramp means it's harder to make use of the clue tokens.
+  </Slot>
+  <Slot slot="tips">
+      - Try to save up sacrifice triggers to hit the lifelink clause.
+      - Play Obsessive Pursuit as soon as possible to maximize the number of clues generated if you need the card advantage. On the contrary against aggro, you should try to play it later especially if you have a slow start and don't need the card advantage.
+      - Obsessive Pursuit is extremely important against control for grinding, so try not to play it into a counterspell especially if your entire hand depends on it.
+      - Make sure to use full control on your upkeep when at 1 life since arena will not give you priority to sacrifice a food to stay alive.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Sentinel of the Nameless City" count={4}>
+  <Slot slot="info">
+    The enter and attack triggers that create map tokens are very synergistic with the deck, since they are easy to sacrifice. Sentinel having vigilance also makes it strong on both offense and defense, so it's an ideal creature for pursuit, which requires creatures to attack.
+    
+    > "Vigilance plus chonky butt means I can attack without problem" - Lin Sivvi
+  </Slot>
+  <Slot slot="sideout">
+  Sentinel is really important for the aggressive part of the deck, only time I would side one out is if combat stats didn't matter and I needed to make space for sideboard cards.
+  </Slot>
+  <Slot slot="tips">
+      - It's important to think ahead and know if you need the map token for next turn; whether for bargain or to hit pursuit's lifelink.
+      - Most of the time even with airships, it's better to attack with the sentinel, since it creates tokens on attack.
+      - Try to get sentinel to 5 toughness in red matchups since Iroh's Demonstration and Obliterating Bolt deal 4 damage.
+  </Slot>
+</CardInfo>
+
+### Removal
+
+Removal is really important to help slow down some of the aggressive strategies in the format. It's often really hard to outpace cub into ouroboroid, Many early creatures are currently must kill threats to prevent the opponent from gaining a large advantage.
+
+Although removal needs to line up well against the format’s threats, there’s an additional layer to consider in this deck. Many of the removal spells can also be synergistic with the overall game plan, so they’re not just answers but pieces that actively contribute to what the deck is trying to do.
+
+<CardInfo name="Tragic Trajectory" count={4}>
+  <Slot slot="info">
+  Tragic Trajectory is a premium removal spell that can hit creatures of almost any size. This deck's primary game plan involves making and sacrificing tokens which triggers void easily. 
+  </Slot>
+  <Slot slot="sideout">
+      Matchups where the opponent has little to no creatures. Also a few copies in matchups with creatures with 3 or more toughness, such as delirium and looting.
+  </Slot>
+  <Slot slot="tips">
+      - If you suspect the opponent has redirect lightning, it might be prudent not to trigger void so that it can't be redirected onto your main threat.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="The Witch's Vanity" count={2}>
+  <Slot slot="info">
+  A removal spell that’s extremely synergistic with the deck. Chapter one answers a creature with mana value two or less, which usually has a target. Chapter two creates a Food token as sacrifice fodder, and chapter three creates a Wicked Role token which buffs a creature and can also be sacrificed. The saga sacrificing itself at the end counts as a sacrifice trigger.
+  
+  Vanity curves really well into airship since it sacrifices itself on turn 4.
+  </Slot>
+  <Slot slot="sideout">
+      Matchups where the opponent has no creatures with mana value 2 or less. 
+  </Slot>
+  <Slot slot="tips">
+      - Use the saga sacrifice to help hit lifelink on pursuit. 
+      - In control matchups, it's often beneficial to just play out vanity if there's no targets to create fodder and sacrifice triggers.
+      - Try to use vanity on valid targets over Tragic trajectory, as tragic trajectory has a wider set of targets.
+      - You can tap the wicked role token with pollinator to generate mana.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Bitter Triumph" count={2}>
+  <Slot slot="info">
+      Bitter triumph is a flexible removal spell with a downside. Black currently lacks a reliable removal spell, both shoot the sheriff and heartless act can be limited in their targets in the current format. The added ability to kill planeswalkers is also nice, cards like Kaito, Bane Nightmares can be a problem.
+  </Slot>
+  <Slot slot="sideout">
+      Matchups where instant speed removal isn't necessary or boardwipes are being brought in so there's less need for one for one removal.
+  </Slot>
+  <Slot slot="tips">
+      - This deck can often discard a card to save life total, with the extra card advantage from pursuit.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Urgent Necropsy" count={1}>
+  <Slot slot="info">
+
+<CardName>Urgent Necropsy</CardName> is a powerful card in matchups where opponents present multiple permanents of different types. It functions as a strong maindeck answer to <CardName>Monument to Endurance</CardName> alongside <CardName>Artist's Talent</CardName>. Destroying both at once is extremely impactful, since a lot of Izzet’s power is predicated on these cards being difficult to interact with. Necropsy is also incidentally strong in other matchups, such as Gruul Delirium, Selesnya Cage, Golgari Roots, and against <CardName>Seam Rip</CardName>.
+
+The deck doesn’t naturally fill the graveyard very quickly, so casting Necropsy “fairly” often relies on spells and creatures that have already traded off. The reason the card is still playable is that most of its important targets are relatively cheap, and <CardName>Beseech the Mirror</CardName> helps bridge that gap by enabling you to collect additional evidence.
+
+One important interaction to note is that Beseeching directly into Necropsy does not allow you to use Beseech itself to pay for evidence, since Beseech is still on the stack while costs are being paid. The key is to loop Beseeches first, putting them into the graveyard before casting Necropsy. This line lets you immediately collect up to 12 evidence from three Beseeches, which is more than enough.
+
+</Slot>
+
+  <Slot slot="sideout">
+
+      This is a meta specific maindeck card, however it's surprisingly good in multiple matchups. Take it out against any deck without multiple permanent types where it's just an overcosted removal spell.
+    
+  </Slot>
+
+  <Slot slot="tips">
+  - Take evidence into consideration when trading creatures or casting spells.
+  - Try to respond to the <CardName>Artist's Talent</CardName>
+  </Slot>
+  
+</CardInfo>
+
+### Top End
+
+<CardInfo name="Phoenix Fleet Airship" count={2}>
+  <Slot slot="info">
+  Why only two copies of the namesake card?
+  
+  Airship is at its best when cast off <CardName>Beseech The Mirror</CardName>, since that immediately satisfies the sacrifice condition and starts replication right away. Casting Airship on turn four with no way to trigger it is much less impactful.
+  
+  Redundant copies also provide minimal benefit. Because replication scales exponentially, additional Airships do not meaningfully accelerate reaching the eight-Airship threshold. Eight is a power of two, so the growth pattern (1 → 2 → 4 → 8) means the deck gains very little from drawing extras. The priority is reliably triggering replication, not playing multiple copies.
+  
+  Airships are powerful on both offense and defense. Defensively, you will almost always be able to block, since Airships can crew each other in response to removal. Once they start multiplying, it becomes extremely difficult for the opponent to push through the final points of damage.
+  </Slot>
+  
+  <Slot slot="sideout">
+      Cut one copy in matchups that are aggressive or have a hard time removing airship from the battlefield or hand. In those matchups a second copy won't be necessary and it's often enough to resolve airship once.
+  </Slot>
+  
+  <Slot slot="tips">
+  #### Eight Copy Threshold
+  
+  Reaching eight Airships in non-control matchups is usually game winning. Even if the opponent has removal on their turn, you are rarely left defenseless since Airships can still crew each other in response.
+  
+  On offense, avoid attacking with every Airship once you reach the threshold if you suspect removal. If the opponent removes one during combat, the rest will stop being creatures and you can lose the entire attack. Leaving some creatures or Airships untapped lets you crew in response and protects your combat step.
+  
+  #### Playing Against Sweepers
+  
+  Against control, the main risk is becoming vulnerable to sweepers once you cross the threshold. This is mostly managed through play patterns. Forcing the opponent to spend spot removal on Airships is still favorable, since they are trading real resources for threats that replace themselves.
+  
+  If you suspect a sweeper, avoid sacrificing on your own turn. Staying below the threshold keeps your Airships safe while still applying pressure, since they will take over the game as long as you have creatures to crew. <CardName>Umbral Collar Zealot</CardName> also functions as sweeper protection by letting you sacrifice Airships at any time to drop back under the threshold.
+  
+  <CardName>Ultima</CardName> is the most punishing sweeper in the matchup, but most lists only play one copy, and many prefer <CardName>Day of Judgment</CardName> or skip Ultima entirely in the current meta. The best approach is steady pressure that forces sweepers to be used early and for low value. After sideboarding, <CardName>Duress</CardName> helps by stripping sweepers from the opponent’s hand.
+  </Slot>
+  
+</CardInfo>
+
+<CardInfo name="Beseech the Mirror" count={4}>
+  <Slot slot="info">
+    Beseech the Mirror is the centerpiece of the deck, and also makes the Airship plan possible. When bargained, it searches up any nonland permanent and puts it directly onto the battlefield - most commonly Phoenix Fleet Airship.
+    
+    Beseech turns the deck into a toolbox, where you can use it to find answers for current threats. It's important to assess the current situation and although airship is the proactive line, sometimes a sweeper or a silver bullet is much more effective.
+    
+    Beseech loops are a very important mechanic for this deck. Beseeching for Beseech allows you to sacrifice multiple permanents or put multiple beseeches in the graveyard. This is useful to increase pursuit counters or for collecting evidence with necropsy.
+    
+  </Slot>
+  <Slot slot="sideout">
+    Never.
+  </Slot>
+  <Slot slot="tips">
+    - You should almost always cast beseech for it's bargain cost.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Bristlebud Farmer" count={1}>
+  <Slot slot="info">
+    Bristlebud Farmer creates two Food tokens when it enters the battlefield and can find a permanent when it attacks. The Food tokens provide sacrifice fodder for bargain costs and can be used to gain life.
+    
+    The attack trigger synergizes with Pursuit - you can stack the triggers so that you sacrifice the food first, making it easier to reach 3 sacrifices for the lifelink clause. As a 5/5 for 4 mana, it's a substantial threat that can take over games in creature-based matchups, especially with lifelink from Pursuit.
+    
+    It's also a good target for Beseech when you need to grind rather than going for the Airship plan.
+  </Slot>
+  <Slot slot="sideout">
+      This card can be mediocre in matchups with a lot of giant creatures like green aggro. I would cut it in those matchups.
+  </Slot>
+  <Slot slot="tips">
+      - This is the go to Beseech target against aggro decks when you have a pursuit online. It can quickly swing the game with a lifelink attack and is hard to kill with red removal.
+  </Slot>
+</CardInfo>
+
+### Sideboard Cards 
+
+<CardInfo name="Duress" count={3}>
+  <Slot slot="info">
+  <CardName>Duress</CardName> is very important in control matchups. It lets you snipe the opponent's answers and counterspells before they matter. Removing their key interaction makes your gameplan much harder to stop.
+  Information is also extremely valuable as this deck has a lot of options to play around various cards. 
+
+  </Slot>
+  <Slot slot="sideout">
+    Duress is brought in against control, combo, and spell-heavy decks. Don't bring it in against creature-heavy aggressive decks where it has few targets.
+  </Slot>
+  <Slot slot="tips">
+      - Evaluate the opponent's entire game state hollistically; it is often a good idea to take cards that develop their game rather than a reactive card.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Intimidation Tactics" count={3}>
+  <Slot slot="info">
+      Intimidation Tactics is similar to Duress, but it takes creatures, which makes it very important against creature combo decks. It can also snipe the top end of aggro decks such as Ouroboroid.
+  </Slot>
+  <Slot slot="sideout">
+      Bring in against creature-combo decks such as kona, airbending and reanimator. Also can bring in a few copies against any creature heavy deck.
+  </Slot>
+  <Slot slot="tips">
+    - Works well when you're behind on board and need to reset.
+    - Your mana dorks will die to this, so consider the timing carefully.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Soul-Guide Lantern" count={1}>
+  <Slot slot="info">
+      Soul-Guide Lantern is an extremely important graveyard hate-piece that is very cheap and can be activated at instant speed. This is very important in a matchup like reanimator where the opponent has can continue their gameplan without forcing the activation or destroying the lantern.
+      
+      Lantern is also a free sacrifice trigger, which can be used proactively with pursuit or airship.
+  </Slot>
+  <Slot slot="sideout">
+    Bring in against graveyard-based strategies like reanimator, recursion decks, or any deck that relies on the graveyard. Can also be Beseeched in game 1 if needed.
+  </Slot>
+  <Slot slot="tips">
+      - Wait on playing lantern to try and use the ETB effectively if it doesn't affect the curve.
+      - Lantern can be sacrificed to draw a card, it's important to evaluate when it's worth doing so, which is mostly when you're out of cards and the opponents gameplan isn't a threat.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Day of Black Sun" count={1}>
+  <Slot slot="info">
+  There is no better board wipe in black for this deck. I would really love a 4 mana value sweeper to tutor off of beseech, but the only option is Terror Tide which this deck can't support. Day of Black Sun atleast destroys tokens when cast this way.
+  
+  Aside from that it's really effective against the green aggro decks, most of their threats have low cmc and it kills Tyvar, The Pummeler. 
+  
+  </Slot>
+  <Slot slot="sideout">
+      Bring in against aggressive decks with low curves or a lot of mana dorks. Also bring in against decks with tokens.
+  </Slot>
+  <Slot slot="tips">
+      - Day of Black Sun can setup one sided board wipes if you have a creature with higher mana value.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Wear Down" count={2}>
+  <Slot slot="info">
+    Wear down is a powerful silver bullet for enchantments and artifacts, it's especially strong in the current meta because it completely disrupts the izzet monument deck, making it hard for the opponents to assemble a clock. The gift a card is often worth it, as it gives a mana advantage.
+    
+    It's also a much stronger card to beseech for, since it provides more value in key situations than a card like heritage reclamation.
+  </Slot>
+  <Slot slot="sideout">
+      Bring in against enchantments and artifacts.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Torpor Orb" count={1}>
+  <Slot slot="info">
+    Torpor Orb is an artifact that prevents creatures' enter-the-battlefield abilities from triggering. This shuts down ETB-based strategies completely.
+    
+    Note that this is a nonbo with several cards in your own deck (Sentinel, Bristlebud Farmer, Gene Pollinator) so only bring it in when shutting down the opponent's ETBs is more important than your own.
+  </Slot>
+  <Slot slot="sideout">
+    Bring in against decks that rely heavily on ETB triggers (like blink decks, reanimator, or value creature decks). Be prepared to turn off some of your own synergies.
+  </Slot>
+  <Slot slot="tips">
+      - Try to play out your own ETBs before playing Torpor Orb.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Dauntless Scrapbot" count={1}>
+  <Slot slot="info">
+  
+  <CardName>Dauntless Scrapbot</CardName> has been excellent graveyard hate. Against Lessons, exiling the graveyard immediately slows them down. <CardName>Ghost Vacuum</CardName> was too slow to matter in those matchups. 
+  
+  Scrapbot’s body and token are also synergistic with the rest of the deck, which makes it a valuable inclusion.
+  
+  </Slot>
+  <Slot slot="sideout">
+      Bring in when you need graveyard hate. Also can be brought in against decks with no creatures as a replacement for removal.
+  </Slot>
+  <Slot slot="tips">
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Day of Judgment" count={1}>
+  <Slot slot="info">
+  Black currently lacks a strong four-mana sweeper in Standard, so the deck splashes white for <CardName>Day of Judgment</CardName>. Having access to this effect through <CardName>Beseech the Mirror</CardName> provides a reliable way to reset the board. In creature matchups especially, value engines like <CardName>Obsessive Pursuit</CardName> and the Airship plan gain a huge advantage when the board is wiped on favorable terms.
+  
+  You do not want to draw or see it in your opening hand, as it’s extremely difficult to cast. However, it is technically castable with help from cards like Gene Pollinator, Starting Towns, and Multiversal Passage.
+  
+  </Slot>
+  <Slot slot="sideout">
+    Bring in against creature-heavy strategies where you need a hard reset. Also against combo decks that assemble large boards.
+  </Slot>
+  <Slot slot="tips">
+      - Make sure you have a follow-up plan.
+      - Timing is very crucial, don't get too greedy.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Ancient Vendetta" count={1}>
+  <Slot slot="info">
+    Ancient Vendetta is an extraction effect that can help against decks that rely on specific cards and are hard to interact with. Being able to beseech for this card makes it a powerful tool against <CardName>Kona, Rescue Beastie</CardName>.
+  </Slot>
+  <Slot slot="sideout">
+    Bring in against decks that rely on a specific card to combo with, such as <CardName>Kona, Rescue Beastie</CardName> or <CardName> Superior Spiderman</CardName>. This card doesn't affect the board at all, so consider if it's worth it.
+  </Slot>
+  <Slot slot="tips">
+    - Cast a duress or intimidation tactics first so you can gain information on the opponents hand and potentially disrupt it by naming something in it.
+    - Even against decks that rely on a specific card, identify which card is worth choosing based on the situation.
+  </Slot>
+</CardInfo>
+
+### Mana Base  
+
+Land Count: 24 + 2 Brave The Wilds
+Black Pips: 23/24 lands
+
+The manabase considerations in this deck center around Beseech the Mirror, because of its 3 black pips. This means that almost every land in the deck has to tap for black to cast beseech on curve. Golgari does not have access to a shockland yet, so the manabase needs to be sequenced correctly.
+
+This deck also wants to avoid playing too many taplands, since they mess with the curve, especially if you draw multiples. The mana base doesn't really have space for utilty even though they would be really nice, since beseech has such an intensive cost.
+
+The land count in this deck is higher than in most Cub-based mana dork decks, and that's very intentional. Hitting land drops is extremely important, since the deck really wants to get to four mana to cast Beseech the Mirror, and having more mana directly translates to being able to sacrifice more tokens in a turn.
+
+While mana dorks and Cub acceleration are powerful, they're also fragile. Because they're easy to remove, relying on them too heavily can leave you stranded short of four mana. The higher land count helps insulate the deck against removal and ensures it can consistently execute its core game plan.
+
+<CardInfo name="Forest" count={2}>
+</CardInfo>
+
+<CardInfo name="Swamp" count={5}>
+</CardInfo>
+
+<CardInfo name="Blooming Marsh" count={4}>
+</CardInfo>
+
+<CardInfo name="Multiversal Passage" count={4}>
+</CardInfo> 
+
+<CardInfo name="Starting Town" count={2}>
+<Slot slot="info">
+Another multicolor land to increase the deck’s total number of duals. It has some tension with Blooming Marsh, since both want to be played early, which can make hitting an untapped fourth land more difficult. That’s why the deck only plays two copies.
+
+It also has the upside of tapping for white, which is relevant for casting <CardName>Day of Judgment</CardName>.
+</Slot>
+<Slot slot="tips">
+The autotapper can be very annoying with gene pollinator since the game wants to prevent you from taking damage. Make sure to tap it for mana first.
+</Slot>
+</CardInfo>
+
+<CardInfo name="Wastewood Verge" count={4}>
+      Works well with the natural curve of the deck. Pays green for early ramp creatures and can tap for black later.
+</CardInfo>
+
+<CardInfo name="Restless Cottage" count={2}>
+  <Slot slot="info">
+    Restless Cottage is a manland with a really valuable attack trigger. It's very synergistic with this deck since it generates sacrifice fodder and provides graveyard hate by exiling cards.
+    
+    Manlands are particularly good with Badgermole Cub since they can be animated for free using Cub's earthbend ability. This also makes it resilient to removal, which allows you to attack with it without fear.
+  </Slot>
+  <Slot slot="tips">
+    - You can activate the restless cottage as a combat trick giving it +4/+4, which many opponents can easily miss.
+  </Slot>
+</CardInfo>
+
+
+<CardInfo name="Fabled Passage" count={2}>
+  <Slot slot="info">
+    Fabled Passage is a fetch land that searches for a basic land. It enters tapped early which isn't ideal for curving out, but it has several important upsides.
+    
+    Counts as a sacrifice trigger for Airship, enabling you to play Airship and immediately trigger it without needing extra mana. Also helps get the third sacrifice for Pursuit's lifelink trigger.
+    
+    When earthbended with Badgermole Cub, you can return the Passage to the battlefield when you sacrifice it. This has several uses: makes turn 3 Passage less painful by giving access to extra mana, can be a chump blocker that sacrifices after blockers are declared, and allows Passage to be used as a sacrifice trigger on another turn.
+  </Slot>
+  <Slot slot="tips">
+  - Save the passage for when you need a sacrifice trigger if you have no use for the mana.
+  </Slot>
+</CardInfo>
+
+## General Strategy
+
+### Curve 
+<div className="max-w-2xl mx-auto">
+  ![Deck Stats](/deck_stats.png)
+</div>
+
+<CardName>Badgermole Cub</CardName> is what pushes the deck toward playing many two mana cards, because it allows you to cast an additional spell on turn 2. 
+
+Elf decks usually want to curve into a three mana play, but <CardName>Badgermole Cub</CardName> enables an entirely new pattern. The ideal start becomes mana dork into Cub with another two mana spell on turn 2. <CardName>Gene Pollinator</CardName> supports this line as well and gives the deck redundancy.
+
+**The Ideal Opening Sequence:**
+
+<div className="bg-muted/30 rounded-lg p-6 my-6 border border-border space-y-4">
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center border-2 border-primary">
+      <span className="text-2xl font-bold text-primary">T1</span>
+    </div>
+    <div className="flex-1 pt-3">
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium text-muted-foreground">1 mana</span>
+        <p><CardName>Llanowar Elves</CardName> or <CardName>Gene Pollinator</CardName></p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center border-2 border-primary">
+      <span className="text-2xl font-bold text-primary">T2</span>
+    </div>
+    <div className="flex-1 pt-3">
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium text-muted-foreground">4 mana</span>
+        <p><CardName>Badgermole Cub</CardName> + <CardName>Obsessive Pursuit</CardName></p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center border-2 border-primary">
+      <span className="text-2xl font-bold text-primary">T3</span>
+    </div>
+    <div className="flex-1 pt-3">
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium text-muted-foreground">6 mana</span>
+        <p><CardName>Beseech the Mirror</CardName> for <CardName>Phoenix Fleet Airship</CardName> + 2-drop/Crack a Clue</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+By the end of turn 3, we have Airships, a card advantage engine and a lot of mana. This hand also still functions through cub dying on turn 2, giving it resiliency.
+
+These are the explosive starts that cub enables and are always snap keeps. The chances of this being your exact opening hand isn't very high, but there are a lot of adjacent hands that can be similarly powerful.
+
+## Matchup Plans
+
+A lot of matchups with this deck become better post-sideboard, since this deck has really good access to sideboard silver bullets with Beseech. This deck can be very flexible on it's cards, although it does need to maintain some level of synergy to keep beseech active as often as possible.
+
+It's important to identify the wincon and who's the beatdown, in the matchup. Even though Airships present an inevitable army, it still can't overcome combos or direct life loss. This changes the texture of each matchup and what the goals are for your top end. In a matchup that has a hard time dealing with airships, you can just sitback and wait for the inevitability to hit, but in some other matchups you have to be the beat down.
+
+### Izzet Lessons with Monument
+
+
+
+This deck has a very powerful win condition in <CardName>Monument to Endurance</CardName>, but the real engine of the deck is <CardName>Artist's Talent</CardName>. Talent is what lets the deck churn through cards, stock the graveyard, and combo with monument effectively. Without Talent, Monument is much less threatening, since the deck has relatively few natural ways to trigger it consistently.
+
+Because of this, removing Talent is one of the highest priorities in the matchup, especially once it reaches level 2. A lot of the deck’s power comes from Monument and Talent being difficult to interact with, which is why effects like <CardName>Urgent Necropsy</CardName> and <CardName>Wear Down</CardName> are so important. Being able to tutor for these answers with <CardName>Beseech the Mirror</CardName> often becomes its primary role in the matchup, as the Airship plan can be too slow when facing an active Monument–Talent engine.
+
+All lessons decks play a very high density of removal, which makes it difficult to stick creatures and keep them in play. This is where Airship is still important, as it's resilience to removal allows you to pressure the opponent and take the focus off the creatures that crew it.
+
+#### Land Creatures
+
+A plan I've had success with against Izzet in general is leaning into land creatures alongside Pursuit to create a large lifelink attacker. This takes advantage of the fact that <CardName>Boomerang Basics</CardName> can't bounce lands.
+
+This requires some setup, but if you can grow a land creature quickly, or use graveyard hate to stay out of <CardName>Combustion Technique</CardName> range, this can completely put you out of range of ever dying to monument.
+
+Earthbending a <CardName>Restless Cottage</CardName> is also very effective at keeping the lesson count in graveyards under control. 
+
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Duress", count: 3 },
+    { name: "Soul-Guide Lantern", count: 1 },
+    { name: "Dauntless Scrapbot", count: 1 },
+    { name: "Wear Down", count: 2 }
+  ]}
+  cardsOut={[
+    { name: "Bitter Triumph", count: 2, note: "Not many creatures in the deck" },
+    { name: "Tragic Trajectory", count: 2 },
+    { name: "Llanowar Elves", count: 2, note: "Less targets for red sweepers" },
+    { name: "Sentinel of the Nameless City", count: 1, note: "Replace with Dauntless Scrapbot" }
+  ]}
+/>
+
+### Izzet Prowess
+
+
+This deck is very value-oriented, leveraging bounce and blink effects to repeatedly extract value from enter-the-battlefield triggers. It’s excellent at trading one-for-one and generally plays out like a control deck.
+
+The primary plan in this matchup is to lean heavily on Airship. The opponent has a hard time removing it and lacks a true board wipe that can effectively answer it. The early game can play out differently depending on whether the opponent’s opening hand is more aggressive or more interaction-heavy, but Airship remains the centerpiece of the plan regardless.
+
+<CardName>Ral, Crackling Wit</CardName> is the scariest card in the deck. If Ral ever ultimates, the game is almost impossible to win. The opponent often has plenty of chump blockers, and Ral’s high loyalty makes it difficult to pressure through combat alone. Because of this, it’s important to prioritize answers like <CardName>Bitter Triumph</CardName> or <CardName>Urgent Necropsy</CardName> to ensure Ral never gets the chance.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Duress", count: 3 },
+    { name: "Day of Black Sun", count: 2 ,note:"Token Threats"},
+  ]}
+  cardsOut={[
+    { name: "Llanowar Elves", count: 2 },
+    { name: "Tragic Trajectory", count: 2 },
+    { name: "The Witch's Vanity", count: 1 }
+  ]}
+/>
+
+### Izzet Looting
+
+
+
+Izzet Looting is an aggressive deck that combines strong card advantage with highly statted creatures. Removal is very important in this matchup, as threats like <CardName>Fear of Missing Out</CardName> and <CardName>Duelist of the Mind</CardName> can represent a large amount of damage if left unchecked.
+
+The primary plan here is to lean heavily on Airship. It’s even stronger in this matchup, since most of the opponent’s creatures line up poorly against 4/4 blockers. Airships can often completely stonewall the board until they reach eight copies, at which point the game is effectively over.
+
+The scariest card in the opponent’s deck is <CardName>Frostcliff Siege</CardName>, and it needs to be respected. Left unchecked, it can enable explosive turns out of nowhere and swing games very quickly.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Duress", count: 3 },
+    { name: "Day of Black Sun", count: 2 , note: "most threats are <=2 mana value"}
+  ]}
+  cardsOut={[
+    { name: "Tragic Trajectory", count: 2, note: "3+ toughness creatures" },
+    { name: "Llanowar Elves", count: 2 },
+  {name: "Bitter Triumph", count: 1}
+  ]}
+/>
+
+### Jeskai Control
+
+
+
+This deck looks to control the early game and eventually scale into <CardName>Jeskai Revelation</CardName>, which is a very powerful spell and can be difficult to beat once it resolves.
+
+The single most important card in this matchup is <CardName>Obsessive Pursuit</CardName>. It provides the card draw needed to keep up through repeated board wipes and enables you to play a longer, grindier game.
+
+Your primary game plan is to apply steady pressure while avoiding overextension. Airships are the backbone of this plan. They are immune to <CardName>Day of Judgment</CardName>, which makes it risky for the opponent to tap out, since any creature in your hand can immediately turn Airships into meaningful pressure.
+
+There is an important subgame around Airship count. The opponent wants you to reach eight Airships so they can cleanly reset the board with a sweeper. You should actively try to pressure them into using spot removal on Airships instead. This forces the opponent to trade down on resources, as they are spending removal on a threat that continually replaces itself.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Duress", count: 3 },
+    { name: "Dauntless Scrapbot", count: 1 }
+  ]}
+  cardsOut={[
+    { name: "The Witch's Vanity", count: 2 },
+    { name: "Tragic Trajectory", count: 2 }
+  ]}
+  conditional={[
+    {
+      condition: "Opponent has enchantment based removal",
+      cardsIn: [{ name: "Wear Down", count: 2, note: "If opponent has enchantment based removal" }],
+      cardsOut: [{ name: "Tragic Trajectory", count: 2}]
+    }
+  ]}
+  
+/>
+
+### Azorius/Esper Synthesizer
+
+
+
+Synthesizer decks can be very scary without early disruption. <CardName>United Battlefront</CardName> and <CardName>Repurposing Bay</CardName> give the deck a lot of redundancy, and game 1 you don’t have much interaction to break that up, so the matchup often turns into a straight race.
+
+Airships are the primary wincon in the matchup. Airships are immune to sweepers that synthesizer decks rely on, <CardName>Split Up</CardName> and <CardName>Pinnacle Starcage</CardName>. If you’re able to get to eight Airships, the game is usually over, so prioritizing lines that enable and protect that plan is key.
+
+Postboard, the matchup improves significantly. Access to hand disruption and <CardName>Wear Down</CardName> lets you slow the opponent down and pick apart their setup, which makes the beatdown plan much more effective and gives you real control over the pace of the game.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Day of Black Sun", count: 1 },
+    { name: "Duress", count: 3 },
+    { name: "Intimidation Tactics", count: 3 },
+    { name: "Wear Down", count: 2 }
+  ]}
+  cardsOut={[
+    { name: "Tragic Trajectory", count: 4 },
+    { name: "Bitter Triumph", count: 2 },
+    { name: "The Witch's Vanity", count: 2 },
+    { name: "Llanowar Elves", count:1}
+  ]}
+/>
+
+### Red Aggro
+
+
+
+The non-Leyline Mono-Red matchup is very favorable, largely because of the lifegain potential built into the deck. <CardName>Obsessive Pursuit</CardName> is especially powerful here, although you still need to be mindful of cards like <CardName>Sunspine Lynx</CardName>, which can occasionally punish overreliance on lifegain.
+
+The core game plan is to set up Pursuit alongside a creature while disrupting the opponent’s early pressure. Mono-Red struggles to answer creatures with five or more toughness, so prioritizing lines that grow creatures past that threshold is key. Once you’re able to loop <CardName>Beseech the Mirror</CardName> and assemble a large lifelinking attacker, the game is effectively locked up, as the opponent has no realistic way to punch through.
+
+Even without Pursuit, the plan remains similar. Focus on deploying high-toughness creatures and stabilizing the board. <CardName>Sentinel of the Nameless City</CardName> is particularly strong in this matchup, as it cleanly outstats most of Mono-Red’s threats and vigilance allows it to both attack and defend efficiently.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Intimidation Tactics", count: 2 },
+    { name: "Day of Judgment", count: 1 },
+    { name: "Day of Black Sun", count: 2 }
+  ]}
+  cardsOut={[
+    { name: "Llanowar Elves", count: 2 },
+    { name: "Obsessive Pursuit", count: 1 },
+    { name: "Phoenix Fleet Airship", count: 1 },
+    { name: "Urgent Necropsy", count: 1 },
+  
+  ]}
+/>
+
+### Gruul Delirium
+
+
+
+This matchup is similar to red aggro, except the deck has a lot more explosive potential with <CardName>Violent Urge</CardName>. Disrupting the graveyard is really powerful against this version, since it's way more dependent on the graveyard. <CardName>Urgent Necropsy</CardName> is also a standout here, since it can kill multiple creatures due to the secondary typings.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Day of Judgment", count: 1 },
+    { name: "Day of Black Sun", count: 2 },
+    { name: "Wear Down", count: 2 },
+    { name: "Soul-Guide Lantern", count: 1 },
+    { name: "Dauntless Scrapbot", count: 1 }
+  ]}
+  cardsOut={[
+    { name: "Obsessive Pursuit", count: 1 },
+    { name: "Tragic Trajectory", count: 3 },
+    { name: "Phoenix Fleet Airship", count: 1 },
+    { name: "Bitter Triumph", count: 2 }
+  ]}
+/>
+
+### Simic Ouroboroid
+
+
+
+This is an explosive aggro deck that’s very difficult to keep under control without early interaction. <CardName>Ouroboroid</CardName> in particular is extremely hard to beat if it goes unanswered, and there are games where failing to find removal quickly can end the game before you ever stabilize.
+
+Postboard, the matchup improves significantly. Gaining access to sweepers gives you a way to reset the board and claw back tempo, which can swing games that would otherwise be unwinnable. Prioritize hands that can interact early or cleanly set up a sweeper turn.
+
+The main complication in this matchup is <CardName>Repulsive Mutation</CardName>. Their access to counterspells means you need to be careful about how and when you deploy your key spells. Try to force interaction on their turn when possible, or sequence in a way that pressures their mana before committing to sweepers or high-impact plays.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Day of Black Sun", count: 2 },
+    { name: "Day of Judgment", count: 1 },
+    { name: "Intimidation Tactics", count: 2 }
+  ]}
+  cardsOut={[
+    { name: "Bitter Triumph", count: 2 },
+    { name: "Phoenix Fleet Airship", count: 1 },
+    { name: "Bristlebud Farmer", count: 1 },
+    { name: "Urgent Necropsy", count: 1 }
+  ]}
+/>
+
+### Simic Kona
+
+ This matchup is very hard to interact with game 1, since there are only 2 instant speed removal spells in the deck. The plan is just to put up as much pressure as possible and hope the opponent doesn't have it. If you have <CardName>Bitter Triumph</CardName>, it's worth keeping it up past turn 4.
+ 
+ Postboard hand-hate and <CardName>Ancient Vendetta</CardName> can make the matchup much easier.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Duress", count: 3 },
+    { name: "Intimidation Tactics", count: 3 },
+    { name: "Ancient Vendetta", count: 1 }
+  ]}
+  cardsOut={[
+    { name: "Tragic Trajectory", count: 4 },
+    { name: "The Witch's Vanity", count: 2 },
+    { name: "Urgent Necropsy", count: 1 }
+  ]}
+/>
+
+### Golgari Roots
+
+This deck trades the explosiveness of green aggro decks in favor of a very grindy plan. This makes it an even better matchup for us since it's slower and airships can just fly over.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Dauntless Scrapbot", count: 1 },
+    { name: "Wear Down", count: 2 },
+    { name: "Day of Black Sun", count: 2 },
+    { name: "Day of Judgment", count: 1 }
+  ]}
+  cardsOut={[
+    { name: "Bitter Triumph", count: 2 },
+    { name: "Bristlebud Farmer", count: 1 },
+    { name: "Llanowar Elves", count: 1 },
+    { name: "Sentinel of the Nameless City", count: 1 },
+    { name: "Tragic Trajectory", count: 1 }
+  ]}
+/>
+
+### Bant Airbending
+Game 1 can be somewhat difficult, but the deck’s access to creature removal keeps the matchup manageable. The primary plan is straightforward beatdown, since the opponent needs to assemble multiple pieces for their game plan to function. Disrupting their creatures and applying pressure is usually enough to stay ahead.
+
+Postboard, the matchup becomes very favorable. The opponent is almost completely shut down by <CardName>Torpor Orb</CardName>, which invalidates a large portion of their deck. The main thing to be mindful of is removal for Torpor Orb, so don’t rely on it as your only way to interact if you can help it.
+
+Another important card to watch out for is <CardName>Aven Interrupter</CardName>. It makes <CardName>Beseech the Mirror</CardName> much worse by taxing bargained Beseeches.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Torpor Orb", count: 2 },
+    { name: "Day of Judgment", count: 1 },
+    { name: "Intimidation Tactics", count: 3 }
+  ]}
+  cardsOut={[
+    { name: "Phoenix Fleet Airship", count: 1 },
+    { name: "Bristlebud Farmer", count: 1 },
+    { name: "Tragic Trajectory", count: 2 },
+    { name: "The Witch's Vanity", count: 2 }
+  ]}
+/>
+
+### Sultai Reanimator
+
+Game 1 is extremely difficult, there is not much interaction in the maindeck to affect the opponent's Bringer combo and no effective ways to recover from it. All you can do is try to be as aggressive as possible while hoping the opponent doesn't have it, which can work. Earthbending Restless Cottage is one of the best things you can do in this matchup, since it can exile cards from the opponents graveyard with the attack trigger. This makes turn one cottage into cub one of the best starts in this matchup.
+
+Postboard graveyard hate makes the opponent have a really tough time advancing their gameplan. It's still about beatdown mainly, but airships can also be really powerful in just ending the game as long as you can prevent bringer.
+
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Soul-Guide Lantern", count: 1 },
+    { name: "Dauntless Scrapbot", count: 1 },
+    { name: "Day of Judgment", count: 1, note: "Deals with combo if opponent doesn't have Terror of the Peaks" },
+    { name: "Intimidation Tactics", count: 3 }
+  ]}
+  cardsOut={[
+    { name: "Tragic Trajectory", count: 4 },
+    { name: "The Witch's Vanity", count: 1 },
+    { name: "Urgent Necropsy", count: 1 }
+  ]}
+/>
+
+### Dimir Kaito
+
+This matchup can be very hard, and skill testing. You have to try and predict what the opponent has, to try and stay ahead. The lack of instant speed removal makes cards like <CardName>Enduring Curiosity</CardName> and <CardName>Kaito, Bane of Nightmares</CardName> hard to prevent from getting value. 
+
+You have to be very careful with badgermole cub in this matchup. If the opponent stuns the land, they can pretty much timewalk you. You have to try your best to play around this by sequencing other spells first. You can also use cub on a passage to get guaranteed value and not have it be a liability. 
+
+Hand hate is so important in this matchup, since it gives you so much information on what to play around. Also sniping a curiosity is extremely powerful, since it's hard to get rid of it completely. Conditional counterspells like annul and phantom interference can be left to rot in the opponent's hand with good information.
+
+Airships are really good in this matchup, and if you're able to establish it early can be game winning.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Intimidation Tactics", count: 3 },
+    { name: "Duress", count: 1 }
+  ]}
+  cardsOut={[
+    { name: "Urgent Necropsy", count: 1 },
+    { name: "The Witch's Vanity", count: 2 },
+    { name: "Badgermole Cub", count: 1, note: "Bad into Floodpits" }
+  ]}
+/>
+
+### Landfall 
+
+This deck is a very grindy deck that also has a oneshot combo with <CardName>Mightform Harmonizer</CardName>. It's important to respect the opponent's ability to oneshot you, so removal for cards that give trample is a must. 
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Wear Down", count: 2 },
+    { name: "Intimidation Tactics", count: 3 }
+  ]}
+  cardsOut={[
+    { name: "Bristlebud Farmer", count: 1 },
+    { name: "The Witch's Vanity", count: 2 },
+    { name: "Tragic Trajectory", count: 2 }
+  ]}
+/>
+
+## Mulligan Guide
+
+This deck wants to curve out and hit a land drop every turn. It scales extremely well with mana, since <CardName>Obsessive Pursuit</CardName> both draws extra cards and converts excess mana into board presence by growing creatures.
+
+The deck also mulligans very well, so you shouldn’t be afraid to go to six to find a functional hand. A slightly smaller hand that curves out cleanly is usually much better than a clunky seven.
+
+The ideal opening hand is mana dork, Cub, Pursuit, and Beseech. This represents the best proactive curve, giving you a large mana advantage early while setting up card draw and inevitability. That said, not every good hand needs a mana dork. What matters most is having early plays that let you curve out and apply pressure.
+
+Mulligan Guidelines
+
+These are general rules and can shift slightly depending on the matchup. In some cases, keeping a weaker hand with a relevant silver bullet can still be correct.
+
+Don’t keep one-land hands, even with mana dorks. Missing an early land drop is disastrous, and mana dorks are very vulnerable to removal.
+
+Don’t keep hands that don’t do anything. You’re looking for a reasonable mix of lands and spells that actually advance your game plan.
+
+Don’t keep hands with only mana dorks. Early ramp without payoffs often leads to stalled hands that don’t apply pressure.
+
+Most hands with Pursuit are keeps. It’s one of the best cards to see early, as it provides the card advantage needed to find missing pieces.
+
+Avoid hands without a one- or two-mana play. These hands are usually too slow to keep up with strong openings from other decks in the format.
+
+## Game Play Sequencing 
+
+This deck offers a lot of interesting decisions and options. Beseech alone represents the option to play any card in the deck. As such here are some common decision points I come across that are fairly nuanced.
+
+#### Turn 2: Obsessive Pursuit vs. Badgermole Cub
+
+On turn 2, deciding whether to play Obsessive Pursuit or Badgermole Cub is very situational.
+
+If you already have a mana dork in play, it’s almost always correct to play Cub first so that you can still deploy Pursuit afterward. If you don’t have a mana dork, the decision becomes more nuanced.
+
+Playing Cub on turn 2 also means you can’t immediately make use of the extra mana from the animated land, so there’s no real mana advantage compared to playing it on turn 3. The main upside of playing Cub on turn 2 is that it gives you an attacker for the following turn and access to four mana on turn 3.
+
+You should also consider what the opponent is representing with open mana. If they’re likely to have removal, leading with Pursuit can play around it and potentially waste their mana. Conversely, if you think the opponent is holding a counterspell like Annul or Spell Pierce, Cub is usually the better play.
+
+Finally, think about what your hand needs. If the rest of your hand is anemic, playing Pursuit first can be correct so that you have an extra Clue to crack for card advantage.
+
+## Weaknesses
+
+<CardName>Clarion Conqueror</CardName> can completely shut down the deck. It turns off Clue sacrifices, mana from dorks and earthbent lands, and even crewing Airships. Because of this, having access to removal for it is extremely important. The deck would struggle significantly against a strategy that consistently plays four copies of Clarion Conqueror, but at the moment it mostly appears as a sideboard card in tier 2–3 decks.
+
+<CardName>Maelstrom Pulse</CardName> can also be very punishing if you’re not expecting it, as it cleanly invalidates the Airship plan. While it doesn’t shut the deck down entirely, it can be very disruptive and force you to pivot your approach.
+
+<CardName>Ultima</CardName> is another card to be aware of. It can destroy all Airships at once and prevent lands animated by <CardName>Badgermole Cub</CardName> from returning. That said, the deck is generally able to recover from this by leaning on <CardName>Obsessive Pursuit</CardName> to grind back into the game.
+
+This deck is not nearly as fast at applying pressure, which is why it struggles game one against combo. Beseech for silver bullets really helps alleviate this post-sideboard.

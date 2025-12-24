@@ -8,6 +8,7 @@ import { TableOfContents } from "@/components/blog/TableOfContents";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { CardInfo, Slot } from "@/components/blog/CardInfo";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -70,7 +71,10 @@ export default async function DeckGuidePage({ params }: PageProps) {
     notFound();
   }
 
-  const components = getMDXComponents();
+  const components = getMDXComponents({
+    CardInfo,
+    Slot,
+  });
   // Filter out h1 headings (title) and only show h2, h3, h4
   const tocHeadings = guide.headings?.filter((h) => h.level >= 2) || [];
 

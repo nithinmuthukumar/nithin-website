@@ -37,7 +37,9 @@ export default function BlogPage() {
                 Golgari Airship Deck Guide
               </Link>
             </CardTitle>
-            <CardDescription>December 20, 2025</CardDescription>
+            <CardDescription>
+              Published December 20, 2025 • Last updated January 13, 2026
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground mb-4">

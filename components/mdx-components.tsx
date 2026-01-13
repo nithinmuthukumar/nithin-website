@@ -31,11 +31,17 @@ export function getMDXComponents(
       name,
       size,
       className,
+      children,
     }: {
-      name: string;
+      name?: string;
       size?: "sm" | "md" | "lg";
       className?: string;
-    }) => <CardImage name={name} size={size} className={className} />,
+      children?: React.ReactNode;
+    }) => (
+      <CardImage name={name} size={size} className={className}>
+        {children}
+      </CardImage>
+    ),
     DeckChanges: ({ sections }: { sections?: any[] }) => (
       <DeckChanges sections={sections || []} />
     ),

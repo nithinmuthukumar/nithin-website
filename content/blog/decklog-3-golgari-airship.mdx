@@ -1,8 +1,8 @@
 ---
 title: "Decklog #3: Golgari Airship"
-date: "2025-12-20"
-excerpt: ""
-thumbnail: ""
+date: "2026-01-11"
+excerpt: "Wrapping up ATLA"
+thumbnail: "/thumbnails/brave-the-wilds.jpg"
 ---
 
 <DecklistCard url="https://moxfield.com/decks/yF298oBNK0-MGUNeDa_vlQ">
@@ -11,19 +11,17 @@ thumbnail: ""
 
 ## Introduction
 
-
+It’s been a month since the last decklog, and a lot has changed. I published the [deck guide](/decks/golgari-airship) about two weeks ago, which you can check out. With Lorwyn just around the corner, the purpose of this decklog is to wrap up the ATLA chapter and go through the various cards I tested over the past month as a record. I’m excited to see how Lorwyn will impact the metagame, as well as the long-awaited completion of shocklands in Standard.
 
 ## State of the Deck
 
+The deck has felt very solid, with strong matchups into every variation of Izzet as well as Simic Ouroboroid. I’m currently on an 11-game win streak against Simic, which strongly suggests that the sideboarding plan has been performing very well in that matchup.
 
+Control has felt harder recently, with opponents playing less enchantment-based removal and more copies of <CardName>Ultima</CardName>.
 
-## Matchup Breakdown
+Landfall has felt fairly even. The deck can kill out of nowhere and also grind very well. It can be clunky at times, but with good disruption the matchup often swings in your favor. Most games are won with Airships, since they cannot block effectively in the air.
 
-<MatchupTable matchups={[
-  { name: "", wins: 0, losses: 0, assessment: "good" },
-]} />
-
-
+Golgari control decks have also popped up, and versions running <CardName>Maelstrom Pulse</CardName> have been quite problematic. Airships are not very resilient in this matchup, and you often end up running out of win conditions. The additional hand disruption spells should also help here.
 
 ## Changes
 
@@ -31,64 +29,124 @@ thumbnail: ""
   {
     title: "Maindeck",
     added: [
+      <>2x <CardName>Brave the Wilds</CardName></>,
+      <CardName>Ruinous Waterbending</CardName>,
+      <CardName>Elegy Acolyte</CardName>,
     ],
     removed: [
+      <CardName>Forest</CardName>,
+      <CardName>Bitter Triumph</CardName>,
+      <CardName>Llanowar Elves</CardName>,
+      <CardName>Bristlebud Farmer</CardName>,
     ]
   },
   {
     title: "Sideboard",
     added: [
+      <CardName>Cruelclaw's Heist</CardName>,
+      <CardName>Ghost Vacuum</CardName>,
+      <CardName>Duress</CardName>,
+      <CardName>The End</CardName>,
     ],
     removed: [
+      <>2x <CardName>Torpor Orb</CardName></>,
+      <CardName>Soul-Guide Lantern</CardName>,
+      <CardName>Intimidation Tactics</CardName>,
     ]
   }
 ]} />
 
+### Brave the Wilds
 
+<CardName>Brave the Wilds</CardName> is the only significant change to the maindeck this month. It is a common from WOE that has performed very well overall. At its base, it functions as a tapped land with meaningful utility, which helps the deck maintain a higher land count.
+
+I first identified this card in Decklog 1 as an interesting option alongside <CardName>Badgermole Cub</CardName>, both as a way to trigger sacrifice and as a creature land. What ultimately pushed it was the fact that large creature lands are very strong into Izzet, since <CardName>Boomerang Basics</CardName> cannot bounce them. This made the card a legitimate plan against Izzet Lessons. Since then, <CardName>Into the Floodmaw</CardName> has increased in popularity, but the card has still felt very powerful.
+
+Beyond that matchup, the deck also felt like it needed more creatures, especially in games where life total matters and you need an attacker to take advantage of lifelink. <CardName>Badgermole Cub</CardName> fills part of this role, but having another option that also provides a sacrifice trigger makes this a much more reliable way to present a hasty lifelinker.
+
+The mana base is still one of the weaker parts of the deck, which makes a basic land tutor more appealing than simply playing a 25th land. With the shocklands entering the format, this will need to be reevaluated.
+
+The play patterns with this card have also been interesting. In the early game, using the bargain mode is usually only correct when targeting an already earthbent land, effectively acting as a +3/+3. This keeps the land from being removed. In the late game, this card often functions as a 3/3 haste creature or a crewer, which has been very relevant.
+
+### Ruinous Waterbending
+
+<CardName>Ruinous Waterbending</CardName> is a maindeck bullet against Simic Ouroboroid, giving the deck a tutorable answer to wide boards of mana dorks. This matchup is largely about preventing them from snowballing early mana, and Waterbending does a very good job of resetting the board when they overextend.
+
+It is very easy to break parity on this card, either through Pursuit counters or the Wicked role token. Because of that, it often plays more like a one-sided effect than a true reset. The Waterbending cost is also occasionally relevant, providing a small amount of lifegain in games where stabilizing matters.
+
+This is a very metagame-specific inclusion, but given the current popularity of Simic Ouroboroid and green-based decks in general, I have been very happy with it in the main deck.
+
+### Bitter Triumph
+
+I experimented with different removal numbers. However, I noticed a significant win rate drop when playing with zero instant-speed removal. Having a copy of <CardName>Bitter Triumph</CardName> is very valuable in matchups like Landfall, and a single copy feels correct.
+
+### Llanowar Elves
+
+I have also been adjusting the number of <CardName>Llanowar Elves</CardName> in the deck. Eight mana dorks felt like too many, so I have been between three and two copies. Mana dorks are very important for accelerating the deck, but playing too many can lead to awkward draws.
+
+### Elegy Acolyte
+
+<CardName>Elegy Acolyte</CardName> and <CardName>Bristlebud Farmer</CardName> are both trying to fill the same role: a tutorable alternative threat to Airship that functions well from behind, is reasonable as a standalone card, and works with Pursuit to gain life.
+
+Elegy Acolyte provides more long-term value. It can create multiple bodies over time, has lifelink built in, and generates recurring advantage if it is not answered. When it sticks, it can quickly take over a game.
+
+Bristlebud Farmer trades some of that value for immediate impact and resilience. Being a 5/5 makes it much harder for red decks to remove, and the ETB Food tokens provide sacrifice fodder right away. Trample also makes it an excellent body to stack counters on and push through board stalls.
+
+I generally find Acolyte to be the stronger standalone card when it survives, but that can be a liability in removal-heavy metagames. In formats with a lot of red removal, I would rather have Bristlebud Farmer. It is also more impactful when cast from hand on an empty board, since triggering void early without setup can be difficult. Because of that, Acolyte is often a card I would rather tutor for than naturally draw.
+
+I would prefer <CardName>Elegy Acolyte</CardName> against green decks where attacking might be more difficult and I want a repeatable source of chump blockers to stay in the game. 
+
+These feel like the two clear top candidates for this slot, and which one I prefer comes down largely to the metagame.
+
+### Ghost Vacuum
+
+<CardName>Ghost Vacuum</CardName> replaced <CardName>Soul-Guide Lantern</CardName> as the deck’s graveyard hate piece. This was a metagame-driven decision. While Soul-Guide Lantern is much better against reanimator, that deck is seeing very little play on Arena right now.
+
+Instead, Landfall has become more common, and Ghost Vacuum is much stronger in that matchup. Being able to kill an opposing earthbent land and then exile it is extremely powerful in those games.
+
+### The End
+
+<CardName>The End</CardName> helps cover some of the combo matchups this deck can struggle against, such as Kona and Temur Otters. It is a more generic answer compared to <CardName>Torpor Orb</CardName> against Airbending combo, but that deck is not seeing much play at the moment.
+
+### Torpor Orb
+
+I have held <CardName>Torpor Orb</CardName> in the sideboard longer than I probably should have. It is extremely powerful against Bant Airbending, but largely irrelevant elsewhere. With that deck seeing less play, I decided to cut it in favor of the more flexible option in <CardName>The End</CardName>.
+
+If Bant Airbending rises in popularity again, this card will come right back in. Even with the win in Atlanta, the deck is still unproven.
 
 ## Other Cards I Tested
 
-### Brave the Wilds
-
-<CardName>Brave the Wilds</CardName>
-
-
-
 ### Icetill Explorer
 
-<CardName>Icetill Explorer</CardName>
+<CardName>Icetill Explorer</CardName> initially seemed like it could fill the role of an alternative threat to Airship, and the card clearly has a high ceiling.
 
-
+It works well with Pursuit, since <CardName>Fabled Passage</CardName> provides a sacrifice trigger, and being able to repeat that interaction every turn is extremely powerful. The issue is the floor. Without access to fetchlands, the card is fairly underwhelming. It effectively requires both a fetchland and Pursuit to be impactful, and without that setup it feels mediocre, asking for too many synergies to justify its inclusion.
 
 ### Axebane Ferox
 
-<CardName>Axebane Ferox</CardName>
+<CardName>Axebane Ferox</CardName> was another card tested for this role, with the added appeal of haste and resiliency. The ceiling involved Beseech looping to present a hasty lifelink threat.
 
+In practice, the card still felt fairly easy to kill or chump, and it did not have the kind of impact I was hoping for. Even when it lined up reasonably well, it often got chumped, which made it fall short of the role.
 
+### The Swarmweaver
 
-### Momentum Breaker
+<CardName>The Swarmweaver</CardName> approached this role from a different angle by immediately creating three bodies. This was useful for crewing Airships and felt like one of the better ways to establish board presence quickly. The flying bodies were also relevant against Dimir.
 
-<CardName>Momentum Breaker</CardName>
-
-
+Delirium mostly felt like occasional upside, and the card was largely evaluated on the fact that it produced three bodies. When Airships were not involved, it did not feel as strong as the other options, and as a result it was ultimately cut.
 
 ## Accumulated Knowledge
 
-Against Dimir, sequencing around <CardName>Floodpits Drowner</CardName> is critical. Avoid playing <CardName>Badgermole Cub</CardName> into open mana when possible - if they stun the animated land, it's essentially a timewalk. Using Cub on <CardName>Fabled Passage</CardName> is a safer line since you get guaranteed value even if they have interaction. Hand disruption is key in this matchup since it reveals what to play around and can snipe <CardName>Enduring Curiosity</CardName> before it sticks.
+My approach to sideboarding in green aggro matchups has changed. I have been cutting two copies of <CardName>Sentinel of the Nameless City</CardName>, since I do not think playing aggressively to the board is as meaningful in these games, especially in the face of an opposing <CardName>Ouroboroid</CardName>. The card can still be useful in the matchup and creatures are still important, so I would never cut all copies.
 
-
-
-## Reflections From Last Week
-
-This week I published the [Golgari Airship Deck Guide](/decks/golgari-airship). Writing it out forced me to articulate a lot of the things I'd been doing on autopilot, and I found gaps in my reasoning for certain matchups. The sideboard guide section was especially useful - having concrete in/out plans rather than vibing each game has made my sideboarding more consistent.
-
-I also experienced some pretty wild variance this week. Had a 12 game winstreak that felt like I couldn't lose, then immediately followed by a loss streak that made me question everything. These streaks can really distort how you perceive the deck. During the winstreak, every card felt amazing and every decision felt correct. During the loss streak, I started second-guessing card choices and lines that were probably fine. It's easy to attribute wins to skill and losses to bad draws, or vice versa. The reality is that sample size matters - you need enough games to separate signal from noise. This is why I'm tracking data on Untapped rather than just going off feel.
-
-
+I have also been cutting one to two copies of <CardName>Brave the Wilds</CardName> against green decks, depending on play or draw. The extra utility from the card matters less in these matchups, and since I am keeping all of the mana dorks, trimming lands has not felt punishing.
 
 ## Next Steps
 
+With Lorwyn coming out, I will be testing and evaluating new cards as they become available. Nothing in particular has stood out yet, but I am keeping an eye out for anything that could meaningfully improve the deck.
 
+Adding the shocklands will also require a rework of the mana base, as well as a reevaluation of <CardName>Brave the Wilds</CardName>. I am hoping this helps clean up some of the fail cases that currently come from the mana.
+
+The RC is also coming up at the end of next month, so I need to start testing more seriously. I am planning to play this deck at the RC and will be putting a lot of focused effort into refining it.
 
 ---
 

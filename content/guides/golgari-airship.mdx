@@ -1,6 +1,7 @@
 ---
 title: "Golgari Airship Deck Guide"
 date: "2025-12-20"
+lastUpdated: "2026-01-13"
 excerpt: "Complete, Up-to-Date Deck Guide for Golgari Airship"
 thumbnail: "/deckpics/golgari-airship-deck-guide.png"
 deck: "Golgari Airship"
@@ -196,7 +197,7 @@ Although removal needs to line up well against the format’s threats, there’s
   </Slot>
 </CardInfo>
 
-<CardInfo name="Bitter Triumph" count={2}>
+<CardInfo name="Bitter Triumph" count={1}>
   <Slot slot="info">
       Bitter triumph is a flexible removal spell with a downside. Black currently lacks a reliable removal spell, both shoot the sheriff and heartless act can be limited in their targets in the current format. The added ability to kill planeswalkers is also nice, cards like Kaito, Bane Nightmares can be a problem.
   </Slot>
@@ -205,6 +206,19 @@ Although removal needs to line up well against the format’s threats, there’s
   </Slot>
   <Slot slot="tips">
       - This deck can often discard a card to save life total, with the extra card advantage from pursuit.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Ruinous Waterbending" count={1}>
+  <Slot slot="info">
+  This is a sweeper that kills small creatures. This card is primarily meant as a tutorable maindeck bullet against Simic Ouroboroid. It's also nice into red aggro decks and other go-wide strategies.
+  </Slot>
+  <Slot slot="sideout">
+  Matchups where the sweeper isn't necessary or creatures toughness are higher.
+  </Slot>
+  <Slot slot="tips">
+  - Tap you dorks when casting this so as to not lose the mana they would produce. 
+  - The additional waterbending cost can is a nice upside that this deck can pay to gain some additional life. Clue tokens and airships can greatly assist this.
   </Slot>
 </CardInfo>
 
@@ -231,6 +245,7 @@ One important interaction to note is that Beseeching directly into Necropsy does
   </Slot>
   
 </CardInfo>
+
 
 ### Top End
 
@@ -284,6 +299,8 @@ One important interaction to note is that Beseeching directly into Necropsy does
   </Slot>
 </CardInfo>
 
+#### Tutorable Creature Options
+
 <CardInfo name="Bristlebud Farmer" count={1}>
   <Slot slot="info">
     Bristlebud Farmer creates two Food tokens when it enters the battlefield and can find a permanent when it attacks. The Food tokens provide sacrifice fodder for bargain costs and can be used to gain life.
@@ -300,9 +317,23 @@ One important interaction to note is that Beseeching directly into Necropsy does
   </Slot>
 </CardInfo>
 
+<CardInfo name="Elegy Acolyte" count={1}>
+  <Slot slot="info">
+    Elegy Acolyte is a tutorable creature that provides both card advantage and board presence. When you trigger void, it creates a 2/2 Robot token, and can be a recurring source of card and board advantage.
+    
+    The built-in lifelink makes any of your creatures connecting a threat, which is particularly strong when stacking counters with Pursuit. It functions as an alternative to Bristlebud Farmer when you need more card advantage over raw stats.
+    
+    It's a solid Beseech target when you want to grind and generate value over multiple turns.
+  </Slot>
+  <Slot slot="tips">
+  - Playing before or after combat should be intentional. Dealing combat damage with any creature will draw a card, but it also incentivizes blocks.
+  - Try to trigger void the turn you play it for a guaranteed 2-for-1.
+  </Slot>
+</CardInfo>
+
 ### Sideboard Cards 
 
-<CardInfo name="Duress" count={3}>
+<CardInfo name="Duress" count={4}>
   <Slot slot="info">
   <CardName>Duress</CardName> is very important in control matchups. It lets you snipe the opponent's answers and counterspells before they matter. Removing their key interaction makes your gameplan much harder to stop.
   Information is also extremely valuable as this deck has a lot of options to play around various cards. 
@@ -316,7 +347,7 @@ One important interaction to note is that Beseeching directly into Necropsy does
   </Slot>
 </CardInfo>
 
-<CardInfo name="Intimidation Tactics" count={3}>
+<CardInfo name="Intimidation Tactics" count={2}>
   <Slot slot="info">
       Intimidation Tactics is similar to Duress, but it takes creatures, which makes it very important against creature combo decks. It can also snipe the top end of aggro decks such as Ouroboroid.
   </Slot>
@@ -326,6 +357,21 @@ One important interaction to note is that Beseeching directly into Necropsy does
   <Slot slot="tips">
     - Works well when you're behind on board and need to reset.
     - Your mana dorks will die to this, so consider the timing carefully.
+  </Slot>
+</CardInfo>
+
+#### Graveyard Hatepiece Options
+
+<CardInfo name="Ghost Vacuum" count={1}>
+  <Slot slot="info">
+  Ghost Vacuum is a graveyard hate card that can exile one card every turn. When deployed early, it can keep graveyards in check, especially against decks which benefit from having specific cards in the graveyard. Also has additional utility in getting rid of enduring creatures and earthbent lands permanently.
+  
+  </Slot>
+  <Slot slot="sideout">
+      Bring in against graveyard-based strategies, particularly reanimator or decks that rely on specific cards in the graveyard. Good against Gruul Delirium and similar strategies. 
+  </Slot>
+  <Slot slot="tips">
+  - Can get rid of earthbent lands for good by exiling them in response to the return trigger.
   </Slot>
 </CardInfo>
 
@@ -341,6 +387,21 @@ One important interaction to note is that Beseeching directly into Necropsy does
   <Slot slot="tips">
       - Wait on playing lantern to try and use the ETB effectively if it doesn't affect the curve.
       - Lantern can be sacrificed to draw a card, it's important to evaluate when it's worth doing so, which is mostly when you're out of cards and the opponents gameplan isn't a threat.
+  </Slot>
+</CardInfo>
+
+<CardInfo name="Dauntless Scrapbot" count={1}>
+  <Slot slot="info">
+  
+  <CardName>Dauntless Scrapbot</CardName> has been excellent graveyard hate. Against Lessons, exiling the graveyard immediately slows them down. <CardName>Ghost Vacuum</CardName> was too slow to matter in those matchups. 
+  
+  Scrapbot's body and token are also synergistic with the rest of the deck, which makes it a valuable inclusion.
+  
+  </Slot>
+  <Slot slot="sideout">
+      Bring in when you need graveyard hate. Also can be brought in against decks with no creatures as a replacement for removal.
+  </Slot>
+  <Slot slot="tips">
   </Slot>
 </CardInfo>
 
@@ -384,21 +445,6 @@ One important interaction to note is that Beseeching directly into Necropsy does
   </Slot>
 </CardInfo>
 
-<CardInfo name="Dauntless Scrapbot" count={1}>
-  <Slot slot="info">
-  
-  <CardName>Dauntless Scrapbot</CardName> has been excellent graveyard hate. Against Lessons, exiling the graveyard immediately slows them down. <CardName>Ghost Vacuum</CardName> was too slow to matter in those matchups. 
-  
-  Scrapbot’s body and token are also synergistic with the rest of the deck, which makes it a valuable inclusion.
-  
-  </Slot>
-  <Slot slot="sideout">
-      Bring in when you need graveyard hate. Also can be brought in against decks with no creatures as a replacement for removal.
-  </Slot>
-  <Slot slot="tips">
-  </Slot>
-</CardInfo>
-
 <CardInfo name="Day of Judgment" count={1}>
   <Slot slot="info">
   Black currently lacks a strong four-mana sweeper in Standard, so the deck splashes white for <CardName>Day of Judgment</CardName>. Having access to this effect through <CardName>Beseech the Mirror</CardName> provides a reliable way to reset the board. In creature matchups especially, value engines like <CardName>Obsessive Pursuit</CardName> and the Airship plan gain a huge advantage when the board is wiped on favorable terms.
@@ -415,16 +461,16 @@ One important interaction to note is that Beseeching directly into Necropsy does
   </Slot>
 </CardInfo>
 
-<CardInfo name="Ancient Vendetta" count={1}>
+<CardInfo name="The End" count={1}>
   <Slot slot="info">
-    Ancient Vendetta is an extraction effect that can help against decks that rely on specific cards and are hard to interact with. Being able to beseech for this card makes it a powerful tool against <CardName>Kona, Rescue Beastie</CardName>.
+  This is an extraction effect that works really well against the various creature combo decks in the format. Being able to beseech for it makes it a valuable tool for completely shutting down decks that need specific creatures to win.
   </Slot>
   <Slot slot="sideout">
     Bring in against decks that rely on a specific card to combo with, such as <CardName>Kona, Rescue Beastie</CardName> or <CardName> Superior Spiderman</CardName>. This card doesn't affect the board at all, so consider if it's worth it.
   </Slot>
   <Slot slot="tips">
-    - Cast a duress or intimidation tactics first so you can gain information on the opponents hand and potentially disrupt it by naming something in it.
-    - Even against decks that rely on a specific card, identify which card is worth choosing based on the situation.
+  - Can also be used to gain information on the opponents hand.
+  - The card has a cost reduction when at 5 or less life, which doesn't come up often but should be kept in mind.
   </Slot>
 </CardInfo>
 

@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Pin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog | Nithin Muthukumar",
@@ -21,6 +22,34 @@ export default function BlogPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
+      {/* Pinned Deck Guide */}
+      <div className="mb-8">
+        <Card className="border-primary/50 bg-primary/5 hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="flex items-center gap-2 mb-2">
+              <Pin className="w-4 h-4 text-primary" />
+            </div>
+            <CardTitle className="text-2xl">
+              <Link
+                href="/decks/golgari-airship"
+                className="hover:text-primary transition-colors"
+              >
+                Golgari Airship Deck Guide
+              </Link>
+            </CardTitle>
+            <CardDescription>December 20, 2025</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground mb-4">
+              Complete, Up-to-Date Deck Guide for Golgari Airship
+            </p>
+            <Button asChild variant="outline">
+              <Link href="/decks/golgari-airship">Read Guide</Link>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+
       {posts.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-muted-foreground">

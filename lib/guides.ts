@@ -9,6 +9,7 @@ export interface Guide {
   slug: string;
   title: string;
   date: string;
+  lastUpdated?: string;
   excerpt?: string;
   thumbnail?: string;
   content: string;
@@ -41,6 +42,7 @@ export function getGuideBySlug(slug: string): Guide | null {
     slug,
     title: data.title || "",
     date: data.date || "",
+    lastUpdated: data.lastUpdated || "",
     excerpt: data.excerpt || "",
     thumbnail: data.thumbnail || "",
     content,

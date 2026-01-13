@@ -91,6 +91,7 @@ export default async function DeckGuidePage({ params }: PageProps) {
           title={guide.title}
           date={guide.date}
           excerpt={guide.excerpt}
+          lastUpdated={guide.lastUpdated}
         />
         <div className="space-y-6">
           <MDXRemote source={guide.content} components={components as any} />

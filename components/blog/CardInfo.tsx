@@ -169,19 +169,28 @@ export function CardInfo({
               onValueChange={setActiveTab}
               className="w-full"
             >
-              <TabsList className="h-8">
+              <TabsList className="h-auto w-full sm:h-8 sm:w-fit flex-col sm:flex-row gap-1 sm:gap-0 items-stretch sm:items-center p-1">
                 {infoContent && (
-                  <TabsTrigger value="info" className="text-xs px-2.5 py-1">
+                  <TabsTrigger
+                    value="info"
+                    className="text-xs px-2.5 py-1.5 w-full sm:w-auto justify-start sm:justify-center"
+                  >
                     Info
                   </TabsTrigger>
                 )}
                 {sideOutContent && (
-                  <TabsTrigger value="sideOut" className="text-xs px-2.5 py-1">
+                  <TabsTrigger
+                    value="sideOut"
+                    className="text-xs px-2.5 py-1.5 w-full sm:w-auto justify-start sm:justify-center"
+                  >
                     Sideboarding
                   </TabsTrigger>
                 )}
                 {tipsContent && (
-                  <TabsTrigger value="tips" className="text-xs px-2.5 py-1">
+                  <TabsTrigger
+                    value="tips"
+                    className="text-xs px-2.5 py-1.5 w-full sm:w-auto justify-start sm:justify-center"
+                  >
                     Tips & Tricks
                   </TabsTrigger>
                 )}

@@ -355,8 +355,7 @@ One important interaction to note is that Beseeching directly into Necropsy does
       Bring in against creature-combo decks such as kona, airbending and reanimator. Also can bring in a few copies against any creature heavy deck.
   </Slot>
   <Slot slot="tips">
-    - Works well when you're behind on board and need to reset.
-    - Your mana dorks will die to this, so consider the timing carefully.
+      - Similar to duress, try to use tactics to disrupt the opponent's ramp package. Otherwise take their payoff such as an <CardName>Ouroboroid</CardName>.
   </Slot>
 </CardInfo>
 
@@ -600,9 +599,27 @@ A lot of matchups with this deck become better post-sideboard, since this deck h
 
 It's important to identify the wincon and who's the beatdown, in the matchup. Even though Airships present an inevitable army, it still can't overcome combos or direct life loss. This changes the texture of each matchup and what the goals are for your top end. In a matchup that has a hard time dealing with airships, you can just sitback and wait for the inevitability to hit, but in some other matchups you have to be the beat down.
 
-### Izzet Lessons with Monument
+### Simic Ouroboroid
 
+This is an explosive ramp deck that’s very difficult to keep under control without early interaction. <CardName>Ouroboroid</CardName> in particular is extremely hard to beat if it goes unanswered, and there are games where failing to find removal quickly can end the game before you ever stabilize.
 
+Postboard, the deck gains access to sweepers which gives you a way to completely regain tempo. Prioritize hands that can interact early or cleanly set up a sweeper turn.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Day of Black Sun", count: 2 },
+    { name: "Day of Judgment", count: 1 },
+    { name: "Intimidation Tactics", count: 2 }
+  ]}
+  cardsOut={[
+    { name: "Sentinel of the Nameless City", count: 2 , note: "Not as good to play to the board"},
+    { name: "Phoenix Fleet Airship", count: 1 },
+    { name: "Brave the Wilds", count: 1 },
+    { name: "Urgent Necropsy", count: 1 }
+  ]}
+/>
+
+### Izzet Lessons
 
 This deck has a very powerful win condition in <CardName>Monument to Endurance</CardName>, but the real engine of the deck is <CardName>Artist's Talent</CardName>. Talent is what lets the deck churn through cards, stock the graveyard, and combo with monument effectively. Without Talent, Monument is much less threatening, since the deck has relatively few natural ways to trigger it consistently.
 
@@ -627,10 +644,11 @@ Earthbending a <CardName>Restless Cottage</CardName> is also very effective at k
     { name: "Wear Down", count: 2 }
   ]}
   cardsOut={[
-    { name: "Bitter Triumph", count: 2, note: "Not many creatures in the deck" },
+    { name: "Bitter Triumph", count: 1, note: "Not many creatures in the deck" },
     { name: "Tragic Trajectory", count: 2 },
     { name: "Llanowar Elves", count: 2, note: "Less targets for red sweepers" },
-    { name: "Sentinel of the Nameless City", count: 1, note: "Replace with Dauntless Scrapbot" }
+    { name: "Sentinel of the Nameless City", count: 1, note: "Replace with Dauntless Scrapbot" },
+    {name: "Phoenix Fleet Airship", count: 1}
   ]}
 />
 
@@ -667,13 +685,14 @@ The scariest card in the opponent’s deck is <CardName>Frostcliff Siege</CardNa
 
 <SideboardGuide 
   cardsIn={[
-    { name: "Duress", count: 3 },
-    { name: "Day of Black Sun", count: 2 , note: "most threats are <=2 mana value"}
+    { name: "Duress", count: 4 },
+    { name: "Day of Black Sun", count: 2 , note: "most threats are <=2 mana value"},
   ]}
   cardsOut={[
     { name: "Tragic Trajectory", count: 2, note: "3+ toughness creatures" },
     { name: "Llanowar Elves", count: 2 },
-  {name: "Bitter Triumph", count: 1}
+  {name: "Bitter Triumph", count: 1},
+  {name: "Ruinous Waterbending", count: 1}
   ]}
 />
 
@@ -691,22 +710,21 @@ There is an important subgame around Airship count. The opponent wants you to re
 
 <SideboardGuide 
   cardsIn={[
-    { name: "Duress", count: 3 },
-    { name: "Dauntless Scrapbot", count: 1 }
+    { name: "Duress", count: 4 },
+    { name: "Dauntless Scrapbot", count: 1 },
+    {name: "Cruelclaw's Heist", count: 1},
+    {name: "The End", count: 1},
+    {name: "Intimidation Tactics", count: 1}
   ]}
   cardsOut={[
     { name: "The Witch's Vanity", count: 2 },
-    { name: "Tragic Trajectory", count: 2 }
+    { name: "Tragic Trajectory", count: 4 },
+    { name: "Urgent Necropsy", count: 1},
+    { name: "Ruinous Waterbending", count: 1},
   ]}
-  conditional={[
-    {
-      condition: "Opponent has enchantment based removal",
-      cardsIn: [{ name: "Wear Down", count: 2, note: "If opponent has enchantment based removal" }],
-      cardsOut: [{ name: "Tragic Trajectory", count: 2}]
-    }
-  ]}
-  
 />
+
+The current version of control plays almost entirely from the hand, which means removal is mostly useless. Hand disruption is key to playing around the opponent's answers.
 
 ### Azorius/Esper Synthesizer
 
@@ -721,21 +739,20 @@ Postboard, the matchup improves significantly. Access to hand disruption and <Ca
 <SideboardGuide 
   cardsIn={[
     { name: "Day of Black Sun", count: 1 },
-    { name: "Duress", count: 3 },
-    { name: "Intimidation Tactics", count: 3 },
+    { name: "Duress", count: 4 },
+    { name: "Intimidation Tactics", count: 2 },
     { name: "Wear Down", count: 2 }
   ]}
   cardsOut={[
     { name: "Tragic Trajectory", count: 4 },
-    { name: "Bitter Triumph", count: 2 },
+    { name: "Bitter Triumph", count: 1 },
     { name: "The Witch's Vanity", count: 2 },
-    { name: "Llanowar Elves", count:1}
+    { name: "Ruinous Waterbending", count: 1},
+        { name: "Brave the Wilds", count: 1}
   ]}
 />
 
 ### Red Aggro
-
-
 
 The non-Leyline Mono-Red matchup is very favorable, largely because of the lifegain potential built into the deck. <CardName>Obsessive Pursuit</CardName> is especially powerful here, although you still need to be mindful of cards like <CardName>Sunspine Lynx</CardName>, which can occasionally punish overreliance on lifegain.
 
@@ -753,14 +770,36 @@ Even without Pursuit, the plan remains similar. Focus on deploying high-toughnes
     { name: "Llanowar Elves", count: 2 },
     { name: "Obsessive Pursuit", count: 1 },
     { name: "Phoenix Fleet Airship", count: 1 },
-    { name: "Urgent Necropsy", count: 1 },
-  
+    { name: "Urgent Necropsy", count: 1 }, 
+  ]}
+/>
+
+### Landfall 
+
+This deck is a very grindy deck that also has a oneshot combo with <CardName>Mightform Harmonizer</CardName>. It's important to respect the opponent's ability to oneshot you, but also advancing your board state.
+
+The opponent's deck can be clunky especially in the early turns due to fetch lands, so it's important to take advantage of that. 
+
+<CardName>Ghost Vacuum</CardName> is really important in this matchup. Aside from exiling fetchlands and <CardName>Esper Origins</CardName>, you can exile earthbent lands in response to the return to battlefield trigger to get rid of them permanently.
+
+<SideboardGuide 
+  cardsIn={[
+    { name: "Intimidation Tactics", count: 2 },
+    { name: "Ghost Vacuum", count: 1},
+    { name: "Day of Judgment", count: 1},
+    {name: "The End", count: 1},
+    {name: "Wear Down", count: 1}
+  ]}
+  cardsOut={[
+    { name: "Sentinel of the Nameless City", count: 2 },
+    { name: "The Witch's Vanity", count: 1 },
+    { name: "Ruinous Waterbending", count: 1},
+    { name: "Brave the Wilds", count: 1},
+    { name: "Phoenix Fleet Airship", count: 1}
   ]}
 />
 
 ### Gruul Delirium
-
-
 
 This matchup is similar to red aggro, except the deck has a lot more explosive potential with <CardName>Violent Urge</CardName>. Disrupting the graveyard is really powerful against this version, since it's way more dependent on the graveyard. <CardName>Urgent Necropsy</CardName> is also a standout here, since it can kill multiple creatures due to the secondary typings.
 
@@ -779,31 +818,6 @@ This matchup is similar to red aggro, except the deck has a lot more explosive p
     { name: "Bitter Triumph", count: 2 }
   ]}
 />
-
-### Simic Ouroboroid
-
-
-
-This is an explosive aggro deck that’s very difficult to keep under control without early interaction. <CardName>Ouroboroid</CardName> in particular is extremely hard to beat if it goes unanswered, and there are games where failing to find removal quickly can end the game before you ever stabilize.
-
-Postboard, the matchup improves significantly. Gaining access to sweepers gives you a way to reset the board and claw back tempo, which can swing games that would otherwise be unwinnable. Prioritize hands that can interact early or cleanly set up a sweeper turn.
-
-The main complication in this matchup is <CardName>Repulsive Mutation</CardName>. Their access to counterspells means you need to be careful about how and when you deploy your key spells. Try to force interaction on their turn when possible, or sequence in a way that pressures their mana before committing to sweepers or high-impact plays.
-
-<SideboardGuide 
-  cardsIn={[
-    { name: "Day of Black Sun", count: 2 },
-    { name: "Day of Judgment", count: 1 },
-    { name: "Intimidation Tactics", count: 2 }
-  ]}
-  cardsOut={[
-    { name: "Bitter Triumph", count: 2 },
-    { name: "Phoenix Fleet Airship", count: 1 },
-    { name: "Bristlebud Farmer", count: 1 },
-    { name: "Urgent Necropsy", count: 1 }
-  ]}
-/>
-
 ### Simic Kona
 
  This matchup is very hard to interact with game 1, since there are only 2 instant speed removal spells in the deck. The plan is just to put up as much pressure as possible and hope the opponent doesn't have it. If you have <CardName>Bitter Triumph</CardName>, it's worth keeping it up past turn 4.
@@ -812,9 +826,9 @@ The main complication in this matchup is <CardName>Repulsive Mutation</CardName>
 
 <SideboardGuide 
   cardsIn={[
-    { name: "Duress", count: 3 },
-    { name: "Intimidation Tactics", count: 3 },
-    { name: "Ancient Vendetta", count: 1 }
+    { name: "Duress", count: 4 },
+    { name: "Intimidation Tactics", count: 2 },
+    { name: "The End", count: 1 }
   ]}
   cardsOut={[
     { name: "Tragic Trajectory", count: 4 },
@@ -852,13 +866,13 @@ Another important card to watch out for is <CardName>Aven Interrupter</CardName>
 
 <SideboardGuide 
   cardsIn={[
-    { name: "Torpor Orb", count: 2 },
+    { name: "The End", count: 1 },
     { name: "Day of Judgment", count: 1 },
-    { name: "Intimidation Tactics", count: 3 }
+    { name: "Intimidation Tactics", count: 2 },
+    { name: "Wear Down", count: 1}
   ]}
   cardsOut={[
     { name: "Phoenix Fleet Airship", count: 1 },
-    { name: "Bristlebud Farmer", count: 1 },
     { name: "Tragic Trajectory", count: 2 },
     { name: "The Witch's Vanity", count: 2 }
   ]}
@@ -904,22 +918,6 @@ Airships are really good in this matchup, and if you're able to establish it ear
     { name: "Urgent Necropsy", count: 1 },
     { name: "The Witch's Vanity", count: 2 },
     { name: "Badgermole Cub", count: 1, note: "Bad into Floodpits" }
-  ]}
-/>
-
-### Landfall 
-
-This deck is a very grindy deck that also has a oneshot combo with <CardName>Mightform Harmonizer</CardName>. It's important to respect the opponent's ability to oneshot you, so removal for cards that give trample is a must. 
-
-<SideboardGuide 
-  cardsIn={[
-    { name: "Wear Down", count: 2 },
-    { name: "Intimidation Tactics", count: 3 }
-  ]}
-  cardsOut={[
-    { name: "Bristlebud Farmer", count: 1 },
-    { name: "The Witch's Vanity", count: 2 },
-    { name: "Tragic Trajectory", count: 2 }
   ]}
 />
 

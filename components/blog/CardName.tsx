@@ -15,6 +15,18 @@ interface CardNameProps {
 export function CardName({ children }: CardNameProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile on mount
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Extract card name text from children
   const cardName =
@@ -26,13 +38,26 @@ export function CardName({ children }: CardNameProps) {
   const scryfallUrl = `https://scryfall.com/search?q=${encodeURIComponent(cardName)}`;
   const cardImageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (isMobile) {
+      e.preventDefault();
+      setIsOpen(!isOpen);
+    }
+  };
+
   return (
-    <HoverCard openDelay={300} closeDelay={100}>
+    <HoverCard
+      openDelay={300}
+      closeDelay={100}
+      open={isMobile ? isOpen : undefined}
+      onOpenChange={isMobile ? setIsOpen : undefined}
+    >
       <HoverCardTrigger asChild>
         <a
           href={scryfallUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleClick}
           className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors font-medium"
         >
           {children}

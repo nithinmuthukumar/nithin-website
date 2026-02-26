@@ -10,6 +10,7 @@ import { DeckChanges } from "@/components/blog/DeckChanges";
 import { MatchupTable } from "@/components/blog/MatchupTable";
 import { SideboardGuide } from "@/components/blog/SideboardGuide";
 import { MatchupRating } from "@/components/blog/MatchupRating";
+import { Aside } from "@/components/blog/Aside";
 import { slugify } from "@/lib/toc";
 
 export function getMDXComponents(
@@ -75,6 +76,9 @@ export function getMDXComponents(
         mainIdeas={mainIdeas}
         conditional={conditional}
       />
+    ),
+    Aside: ({ children }: { children?: React.ReactNode }) => (
+      <Aside>{children}</Aside>
     ),
     MatchupRating: ({
       rating,

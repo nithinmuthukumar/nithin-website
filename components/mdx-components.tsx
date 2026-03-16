@@ -9,8 +9,10 @@ import { CardImage } from "@/components/blog/CardImage";
 import { DeckChanges } from "@/components/blog/DeckChanges";
 import { MatchupTable } from "@/components/blog/MatchupTable";
 import { SideboardGuide } from "@/components/blog/SideboardGuide";
+import { SideboardMatrix } from "@/components/blog/SideboardMatrix";
 import { MatchupRating } from "@/components/blog/MatchupRating";
 import { Aside } from "@/components/blog/Aside";
+import { CardInfo, Slot } from "@/components/blog/CardInfo";
 import { slugify } from "@/lib/toc";
 
 export function getMDXComponents(
@@ -49,6 +51,9 @@ export function getMDXComponents(
     MatchupTable: ({ matchups }: { matchups?: any[] }) => (
       <MatchupTable matchups={matchups || []} />
     ),
+    SideboardMatrix: ({ sideboardCards, maindeckCards, matchups }: { sideboardCards?: any[]; maindeckCards?: any[]; matchups?: any[] }) => (
+      <SideboardMatrix sideboardCards={sideboardCards || []} maindeckCards={maindeckCards || []} matchups={matchups || []} />
+    ),
     SideboardGuide: ({
       cardsIn,
       cardsOut,
@@ -79,6 +84,12 @@ export function getMDXComponents(
     ),
     Aside: ({ children }: { children?: React.ReactNode }) => (
       <Aside>{children}</Aside>
+    ),
+    CardInfo: ({ name, count, accent, children }: { name: string; count?: number; accent?: any; children?: React.ReactNode }) => (
+      <CardInfo name={name} count={count} accent={accent}>{children}</CardInfo>
+    ),
+    Slot: ({ slot, children }: { slot?: any; children?: React.ReactNode }) => (
+      <Slot slot={slot}>{children}</Slot>
     ),
     MatchupRating: ({
       rating,

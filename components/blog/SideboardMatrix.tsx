@@ -108,10 +108,10 @@ interface TooltipState {
 
 function MatchupTooltip({ state }: { state: TooltipState }) {
   const inEntries = Object.entries(state.matchup.in ?? {}).filter(
-    ([, v]) => v > 0,
+    ([, v]) => (v ?? 0) > 0,
   );
   const outEntries = Object.entries(state.matchup.out ?? {}).filter(
-    ([, v]) => v > 0,
+    ([, v]) => (v ?? 0) > 0,
   );
   if (inEntries.length === 0 && outEntries.length === 0) return null;
 
@@ -339,14 +339,14 @@ function buildInsights(
 
   // Check for imbalanced matchups
   const imbalanced = matchups.filter((m) => {
-    const inTotal = Object.values(m.in ?? {}).reduce((a, b) => a + b, 0);
-    const outTotal = Object.values(m.out ?? {}).reduce((a, b) => a + b, 0);
+    const inTotal = Object.values(m.in ?? {}).reduce((a: number, b) => a + (b ?? 0), 0);
+    const outTotal = Object.values(m.out ?? {}).reduce((a: number, b) => a + (b ?? 0), 0);
     return (inTotal > 0 || outTotal > 0) && inTotal !== outTotal;
   });
   if (imbalanced.length > 0) {
     items.push({
       type: "warning",
-      message: `Unbalanced sideboarding in: ${imbalanced.map((m) => `${m.name} (in ${Object.values(m.in ?? {}).reduce((a, b) => a + b, 0)}, out ${Object.values(m.out ?? {}).reduce((a, b) => a + b, 0)})`).join("; ")}`,
+      message: `Unbalanced sideboarding in: ${imbalanced.map((m) => `${m.name} (in ${Object.values(m.in ?? {}).reduce((a: number, b) => a + (b ?? 0), 0)}, out ${Object.values(m.out ?? {}).reduce((a: number, b) => a + (b ?? 0), 0)})`).join("; ")}`,
     });
   }
 
@@ -409,7 +409,7 @@ function findPackages(
     (m) =>
       new Set(
         Object.entries(m.in ?? {})
-          .filter(([, v]) => v > 0)
+          .filter(([, v]) => (v ?? 0) > 0)
           .map(([k]) => k),
       ),
   );
@@ -417,7 +417,7 @@ function findPackages(
     (m) =>
       new Set(
         Object.entries(m.out ?? {})
-          .filter(([, v]) => v > 0)
+          .filter(([, v]) => (v ?? 0) > 0)
           .map(([k]) => k),
       ),
   );
@@ -528,8 +528,8 @@ export function SideboardMatrix({
 
   // Per-matchup balance: sum(in) vs sum(out)
   const balance = matchups.map((m) => {
-    const inTotal = Object.values(m.in ?? {}).reduce((a, b) => a + b, 0);
-    const outTotal = Object.values(m.out ?? {}).reduce((a, b) => a + b, 0);
+    const inTotal = Object.values(m.in ?? {}).reduce((a: number, b) => a + (b ?? 0), 0);
+    const outTotal = Object.values(m.out ?? {}).reduce((a: number, b) => a + (b ?? 0), 0);
     return { inTotal, outTotal, ok: inTotal === outTotal };
   });
 

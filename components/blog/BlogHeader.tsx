@@ -5,6 +5,7 @@ interface BlogHeaderProps {
   date: string;
   excerpt?: string;
   lastUpdated?: string;
+  wordCount?: number;
 }
 
 export function BlogHeader({
@@ -12,6 +13,7 @@ export function BlogHeader({
   date,
   excerpt,
   lastUpdated,
+  wordCount,
 }: BlogHeaderProps) {
   return (
     <header className="mb-12 pb-8 border-b border-border">
@@ -48,6 +50,11 @@ export function BlogHeader({
               </time>
             </span>
           </div>
+        )}
+        {wordCount !== undefined && (
+          <span className="text-sm text-muted-foreground/60">
+            {wordCount.toLocaleString()} words
+          </span>
         )}
       </div>
       {excerpt && (

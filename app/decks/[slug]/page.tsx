@@ -75,8 +75,9 @@ export default async function DeckGuidePage({ params }: PageProps) {
     CardInfo,
     Slot,
   });
-  // Filter out h1 headings (title) and only show h2, h3, h4
   const tocHeadings = guide.headings?.filter((h) => h.level >= 2) || [];
+  const plainText = guide.content.replace(/<[^>]+>/g, " ").replace(/[{}[\]]/g, " ");
+  const wordCount = plainText.trim().split(/\s+/).filter(Boolean).length;
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
@@ -92,9 +93,10 @@ export default async function DeckGuidePage({ params }: PageProps) {
           date={guide.date}
           excerpt={guide.excerpt}
           lastUpdated={guide.lastUpdated}
+          wordCount={wordCount}
         />
         <div className="space-y-6">
-          <MDXRemote source={guide.content} components={components as any} />
+          <MDXRemote source={guide.content} components={components as any} options={{ blockJS: false }} />
         </div>
         <TableOfContents headings={tocHeadings} />
       </article>

@@ -63,14 +63,15 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const components = getMDXComponents();
-  // Filter out h1 headings (title) and only show h2, h3, h4
   const tocHeadings = post.headings?.filter((h) => h.level >= 2) || [];
+  const plainText = post.content.replace(/<[^>]+>/g, " ").replace(/[{}[\]]/g, " ");
+  const wordCount = plainText.trim().split(/\s+/).filter(Boolean).length;
 
   return (
     <BlogPostLayout>
-      <BlogHeader title={post.title} date={post.date} excerpt={post.excerpt} />
+      <BlogHeader title={post.title} date={post.date} excerpt={post.excerpt} wordCount={wordCount} />
       <div className="space-y-6">
-        <MDXRemote source={post.content} components={components as any} />
+        <MDXRemote source={post.content} components={components as any} options={{ blockJS: false }} />
       </div>
       <TableOfContents headings={tocHeadings} />
     </BlogPostLayout>
